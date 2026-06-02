@@ -158,7 +158,7 @@ export function ProductImage({
       {/* Watermark Logo Overlay — perfectly circular, clean & premium */}
       {isLoaded && shouldShowWatermark && (
         <div
-          className="absolute bottom-2.5 right-2.5 z-10 pointer-events-none select-none"
+          className="absolute bottom-2.5 right-2.5 z-40 pointer-events-none select-none"
           style={{
             width: '34px',
             height: '34px',
