@@ -89,7 +89,7 @@ export default function Navigation({
                 Kadal <span className="lining-nums">2</span> Kadaai
               </span>
               <span className={`text-[8px] sm:text-[9px] tracking-widest uppercase block font-bold ${
-                isNavbarWhite ? 'text-sky-700' : 'text-sky-300'
+                isNavbarWhite ? 'text-[#26497F]' : 'text-[#FFB19E]'
               }`}>
                 Sea to Kitchen
               </span>
@@ -108,15 +108,15 @@ export default function Navigation({
                 }}
                 className={`relative px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer flex items-center gap-1.5 ${
                   currentPage === 'home'
-                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#03045E] font-bold'
-                    : isNavbarWhite ? 'text-gray-500 hover:text-[#0077B6]' : 'text-sky-100 hover:text-white'
+                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#0B1F3A] font-bold'
+                    : isNavbarWhite ? 'text-gray-500 hover:text-[#FF6B4A]' : 'text-[#FFE8E3] hover:text-white'
                 }`}
               >
                 {currentPage === 'home' && (
                   <motion.div
                     layoutId="desktopPageBG"
                     className={`absolute inset-0 rounded-lg -z-10 ${
-                      isNavbarWhite ? 'bg-[#0077B6]' : 'bg-white shadow-md'
+                      isNavbarWhite ? 'bg-[#FF6B4A]' : 'bg-white shadow-md'
                     }`}
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
@@ -132,15 +132,15 @@ export default function Navigation({
                 }}
                 className={`relative px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer flex items-center gap-1.5 ${
                   currentPage === 'market'
-                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#03045E] font-bold'
-                    : isNavbarWhite ? 'text-gray-500 hover:text-[#0077B6]' : 'text-sky-100 hover:text-white'
+                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#0B1F3A] font-bold'
+                    : isNavbarWhite ? 'text-gray-500 hover:text-[#FF6B4A]' : 'text-[#FFE8E3] hover:text-white'
                 }`}
               >
                 {currentPage === 'market' && (
                   <motion.div
                     layoutId="desktopPageBG"
                     className={`absolute inset-0 rounded-lg -z-10 ${
-                      isNavbarWhite ? 'bg-[#0077B6]' : 'bg-white shadow-md'
+                      isNavbarWhite ? 'bg-[#FF6B4A]' : 'bg-white shadow-md'
                     }`}
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
@@ -168,8 +168,8 @@ export default function Navigation({
                       setSearchTerm(e.target.value);
                       onSearch(e.target.value);
                     }}
-                    className={`h-9 px-3 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-sky-500 mr-2 ${
-                      isNavbarWhite ? 'bg-gray-50 border-gray-200 text-gray-800' : 'bg-white/15 border-white/20 text-white placeholder-sky-200'
+                    className={`h-9 px-3 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#FF6B4A] mr-2 ${
+                      isNavbarWhite ? 'bg-[#FFF8F0] border-gray-200 text-gray-800' : 'bg-white/15 border-white/20 text-white placeholder-[#FFD3C9]'
                     }`}
                   />
                 )}
@@ -218,7 +218,7 @@ export default function Navigation({
             >
               <ShoppingBag className="h-5 w-5" style={{ color: isNavbarWhite ? '#030303' : undefined }} />
               {totalCartItems > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-[#0077B6] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-0.5 -right-0.5 bg-[#FF6B4A] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                   {totalCartItems}
                 </span>
               )}
@@ -269,17 +269,17 @@ export default function Navigation({
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-4/5 max-w-sm h-full bg-[#03045E] text-white flex flex-col justify-between p-6 shadow-2xl relative"
+              className="w-4/5 max-w-sm h-full bg-[#0B1F3A] text-white flex flex-col justify-between p-6 shadow-2xl relative"
             >
               <div>
-                <div className="flex items-center justify-between mb-8 pb-4 border-b border-sky-900/40">
+                <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#0B1F3A]/40">
                   <div className="flex items-center">
                     <Logo className="h-28 w-28 shrink-0 mx-auto" />
                   </div>
                   <button
                     id="mobile-drawer-close"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-1.5 rounded-lg bg-sky-900/30 text-sky-200 hover:text-white"
+                    className="p-1.5 rounded-lg bg-[#0B1F3A]/30 text-[#FFD3C9] hover:text-white"
                   >
                     <X className="h-5 w-5" />
                   </button>
@@ -295,8 +295,8 @@ export default function Navigation({
                         onNavigate('home');
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full text-left text-base font-bold pb-2 border-b border-sky-900/40 flex items-center justify-between ${
-                        currentPage === 'home' ? 'text-teal-300' : 'text-sky-200'
+                      className={`w-full text-left text-base font-bold pb-2 border-b border-[#0B1F3A]/40 flex items-center justify-between ${
+                        currentPage === 'home' ? 'text-teal-300' : 'text-[#FFD3C9]'
                       }`}
                     >
                       <span className="font-serif">⚓ Home Page</span>
@@ -312,8 +312,8 @@ export default function Navigation({
                         onNavigate('marketplace-hub');
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full text-left text-base font-bold pb-2 border-b border-sky-900/40 flex items-center justify-between ${
-                        currentPage === 'market' ? 'text-teal-300' : 'text-sky-200'
+                      className={`w-full text-left text-base font-bold pb-2 border-b border-[#0B1F3A]/40 flex items-center justify-between ${
+                        currentPage === 'market' ? 'text-teal-300' : 'text-[#FFD3C9]'
                       }`}
                     >
                       <span className="font-serif">🛒 Marketplace</span>
@@ -324,19 +324,19 @@ export default function Navigation({
                 </nav>
               </div>
 
-              <div className="pb-8 pt-4 border-t border-sky-900/40 flex flex-col gap-3">
+              <div className="pb-8 pt-4 border-t border-[#0B1F3A]/40 flex flex-col gap-3">
                 <button
                   id="mobile-auth-btn"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     setIsLoginModalOpen(true);
                   }}
-                  className="w-full flex items-center justify-center gap-2 bg-[#0077B6] hover:bg-[#0096C7] text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-sky-950/40 transition-colors text-sm"
+                  className="w-full flex items-center justify-center gap-2 bg-[#FF6B4A] hover:bg-[#E85A3A] text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-[#09172B]/40 transition-colors text-sm"
                 >
                   <User className="h-4 w-4" />
                   <span>{isLoggedIn ? 'Access Account' : 'Sign In Now'}</span>
                 </button>
-                <p className="text-center text-[10px] text-sky-300/60 font-sans">
+                <p className="text-center text-[10px] text-[#FFB19E]/60 font-sans">
                   Direct Daily Catch Premium Logistics
                 </p>
               </div>
@@ -360,7 +360,7 @@ export default function Navigation({
               exit={{ scale: 0.95, y: 20 }}
               className="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-2xl relative border border-gray-100"
             >
-              <div className="bg-[#03045E] p-6 text-white flex flex-col items-center relative">
+              <div className="bg-[#0B1F3A] p-6 text-white flex flex-col items-center relative">
                 <button
                   id="login-close-btn"
                   onClick={() => setIsLoginModalOpen(false)}
@@ -370,18 +370,18 @@ export default function Navigation({
                 </button>
                 <Logo className="h-20 w-20 mb-3 shadow-lg" />
                 <h3 className="font-serif text-2xl font-bold tracking-tight text-center">Join Kadal <span className="lining-nums">2</span> Kadaai</h3>
-                <p className="text-xs text-sky-200 mt-1 text-center font-sans">Authentic coastal fresh seafood straight to your home</p>
+                <p className="text-xs text-[#FFD3C9] mt-1 text-center font-sans">Authentic coastal fresh seafood straight to your home</p>
               </div>
 
               <div className="p-6 sm:p-8">
                 {isLoggedIn ? (
                   <div className="text-center py-4">
-                    <div className="w-16 h-16 bg-sky-100 text-sky-600 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    <div className="w-16 h-16 bg-[#FFE8E3] text-[#FF6B4A] rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                       {userEmail ? userEmail.charAt(0).toUpperCase() : 'U'}
                     </div>
                     <h4 className="text-gray-800 font-semibold mb-1">Welcome Back!</h4>
                     <p className="text-xs text-[#1A1A2E] font-medium break-all mb-6">{userEmail || 'thiruvikram8925@gmail.com'}</p>
-                    <div className="p-3 bg-sky-50 border border-sky-100 rounded-xl mb-6 text-xs text-sky-800 font-sans">
+                    <div className="p-3 bg-[#FFF8F0] border border-[#FFE8E3] rounded-xl mb-6 text-xs text-[#1B3864] font-sans">
                       Delivery Pin: <strong>600001 (Chennai Central)</strong> - Express same-morning routing active.
                     </div>
                     <button
@@ -412,19 +412,19 @@ export default function Navigation({
                         placeholder="yourname@gmail.com"
                         value={userEmail}
                         onChange={(e) => setUserEmail(e.target.value)}
-                        className="w-full px-3.5 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 bg-gray-50/50"
+                        className="w-full px-3.5 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-[#FF6B4A] focus:border-[#FF6B4A] bg-[#FFF8F0]/50"
                       />
                     </div>
                     <div>
                       <label className="block text-xs font-semibold text-gray-700 mb-1">Mobile Number (For fresh delivery updates)</label>
                       <div className="flex gap-2">
-                        <span className="inline-flex items-center px-3 border border-gray-200 rounded-xl bg-gray-50 text-sm text-gray-500 font-mono">+91</span>
+                        <span className="inline-flex items-center px-3 border border-gray-200 rounded-xl bg-[#FFF8F0] text-sm text-gray-500 font-mono">+91</span>
                         <input
                           type="tel"
                           required
                           pattern="[0-9]{10}"
                           placeholder="9876543210"
-                          className="flex-1 px-3.5 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 bg-gray-50/50"
+                          className="flex-1 px-3.5 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-[#FF6B4A] focus:border-[#FF6B4A] bg-[#FFF8F0]/50"
                         />
                       </div>
                     </div>
@@ -433,7 +433,7 @@ export default function Navigation({
                       <button
                         id="submit-login-btn"
                         type="submit"
-                        className="w-full bg-[#0077B6] hover:bg-sky-600 text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-lg shadow-sky-100 cursor-pointer"
+                        className="w-full bg-[#FF6B4A] hover:bg-[#E85A3A] text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-lg shadow-[#FFE3DC] cursor-pointer"
                       >
                         Verify & Login with OTP
                       </button>

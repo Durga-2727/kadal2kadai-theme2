@@ -79,22 +79,22 @@ export default function TopSellingSection({
       {/* Background Subtle Watermark Rings */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20%" cy="30%" r="200" fill="#0077B6" />
-          <circle cx="80%" cy="70%" r="300" fill="#03045E" />
+          <circle cx="20%" cy="30%" r="200" fill="#FF6B4A" />
+          <circle cx="80%" cy="70%" r="300" fill="#0B1F3A" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#0077B6]/10 border border-[#0077B6]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#0077B6] tracking-wider font-mono">
-            <Award className="h-4.5 w-4.5 text-[#0077B6]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FF6B4A]/10 border border-[#FF6B4A]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#FF6B4A] tracking-wider font-mono">
+            <Award className="h-4.5 w-4.5 text-[#FF6B4A]" />
             <span>Top Rated & Coveted</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
             Top Selling Seafood
           </h2>
-          <div className="w-16 h-1 bg-[#0077B6] mx-auto mt-4 rounded-full" />
+          <div className="w-16 h-1 bg-[#FF6B4A] mx-auto mt-4 rounded-full" />
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
             The most sought-after catches, favored by premium chefs and home cooks alike for their exquisite taste, absolute freshness, and immaculate cuts.
           </p>
@@ -124,7 +124,7 @@ export default function TopSellingSection({
                   onClick={() => onSelectProduct(p)}
                 >
                   {/* Product Image Stage */}
-                  <div className="relative aspect-square overflow-hidden bg-slate-50 select-none">
+                  <div className="relative aspect-square overflow-hidden bg-[#FFF8F0] select-none">
                     <ProductImage
                       productId={p.id}
                       src={p.images[0]}
@@ -172,7 +172,7 @@ export default function TopSellingSection({
                     <div>
                       {/* Localized subtag and ratings count */}
                       <div className="flex items-center justify-between gap-1 mb-1">
-                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#0077B6] uppercase font-mono block max-w-[120px] truncate">
+                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#FF6B4A] uppercase font-mono block max-w-[120px] truncate">
                           {p.localName}
                         </span>
                         <div className="flex items-center gap-0.5 font-sans shrink-0">
@@ -182,7 +182,7 @@ export default function TopSellingSection({
                       </div>
 
                       {/* Title block */}
-                      <p className="font-serif text-sm sm:text-base font-bold text-slate-800 tracking-tight group-hover:text-[#0077B6] transition-colors truncate">
+                      <p className="font-serif text-sm sm:text-base font-bold text-slate-800 tracking-tight group-hover:text-[#FF6B4A] transition-colors truncate">
                         {p.name}
                       </p>
 
@@ -194,7 +194,7 @@ export default function TopSellingSection({
                             id={`top-weight-select-${p.id}-${idx}`}
                             value={weightSelected}
                             onChange={(e) => handleWeightChange(p.id, e.target.value)}
-                            className="bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#0077B6] transition-all"
+                            className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF6B4A] transition-all"
                           >
                             {p.availableWeights.map(w => (
                               <option key={w} value={w}>{w}</option>
@@ -213,7 +213,7 @@ export default function TopSellingSection({
                               id={`top-processing-select-${p.id}-${idx}`}
                               value={processingSelected}
                               onChange={(e) => handleProcessingChange(p.id, e.target.value)}
-                              className="bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#0077B6] transition-all"
+                              className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF6B4A] transition-all"
                             >
                               {p.processingOptions.map(o => (
                                 <option key={o} value={o}>{o}</option>
@@ -229,8 +229,8 @@ export default function TopSellingSection({
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between">
                       <div className="flex flex-col">
                         <div className="flex items-baseline gap-0.5">
-                          <span className="text-xs font-bold text-[#03045E]">₹</span>
-                          <span className="text-base font-extrabold text-[#03045E]">{currentPrice}</span>
+                          <span className="text-xs font-bold text-[#0B1F3A]">₹</span>
+                          <span className="text-base font-extrabold text-[#0B1F3A]">{currentPrice}</span>
                         </div>
                         <span className="text-[9px] text-slate-400 tracking-wide font-mono">/{weightSelected}</span>
                       </div>

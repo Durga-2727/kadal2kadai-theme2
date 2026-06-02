@@ -91,7 +91,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
         />
         {/* Layered Gradient Overlay: Dark navy bottom to dark transparent top with requested background tint */}
         <div
-          className="absolute inset-0 bg-gradient-to-t from-[#03045E]/95 via-[#03045E]/40 to-transparent z-10 opacity-80"
+          className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/95 via-[#0B1F3A]/40 to-transparent z-10 opacity-80"
           style={{ backgroundColor: '#66b6c1' }}
         />
       </div>
@@ -122,7 +122,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, type: 'spring' }}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/20 text-sky-300 text-xs font-semibold mb-6 tracking-widest uppercase font-mono"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FF6B4A]/15 border border-[#FF8A6E]/20 text-[#FFB19E] text-xs font-semibold mb-6 tracking-widest uppercase font-mono"
         >
           <Waves className="h-3.5 w-3.5 animate-bounce" />
           <span>Coastal Sourced · Tamil Nadu Direct</span>
@@ -140,7 +140,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
             className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[81px] font-bold tracking-tight leading-[1.1]"
           >
             From Ocean Waves <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-aqua-200 to-sky-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFB19E] via-[#FFD3C9] to-[#FF8A6E]">
               to Your Kitchen Flames
             </span>
           </motion.h1>
@@ -156,14 +156,14 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
                 id="stat-customers"
                 className="flex items-center gap-3 justify-start"
               >
-                <div className="p-2 bg-sky-500/10 rounded-xl text-[#00B4D8] shrink-0 border border-sky-400/20">
-                  <Users className="h-5 w-5 text-sky-200" />
+                <div className="p-2 bg-[#FF6B4A]/10 rounded-xl text-[#FF8A6E] shrink-0 border border-[#FF8A6E]/20">
+                  <Users className="h-5 w-5 text-[#FFD3C9]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#00B4D8] mb-0 leading-none">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#FF8A6E] mb-0 leading-none">
                     <AnimatedCounter target={10000} suffix="+" />
                   </p>
-                  <p className="text-[10px] sm:text-xs text-sky-100/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
+                  <p className="text-[10px] sm:text-xs text-[#FFE8E3]/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
                     Happy Customers
                   </p>
                 </div>
@@ -174,14 +174,14 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
                 id="stat-fishermen"
                 className="flex items-center gap-3 justify-start"
               >
-                <div className="p-2 bg-sky-500/10 rounded-xl text-[#00B4D8] shrink-0 border border-sky-400/20">
-                  <Ship className="h-5 w-5 text-sky-200" />
+                <div className="p-2 bg-[#FF6B4A]/10 rounded-xl text-[#FF8A6E] shrink-0 border border-[#FF8A6E]/20">
+                  <Ship className="h-5 w-5 text-[#FFD3C9]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#00B4D8] mb-0 leading-none">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#FF8A6E] mb-0 leading-none">
                     <AnimatedCounter target={500} suffix="+" />
                   </p>
-                  <p className="text-[10px] sm:text-xs text-sky-100/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
+                  <p className="text-[10px] sm:text-xs text-[#FFE8E3]/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
                     Fishermen Partners
                   </p>
                 </div>
@@ -192,14 +192,14 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
                 id="stat-deliveries"
                 className="flex items-center gap-3 justify-start"
               >
-                <div className="p-2 bg-sky-500/10 rounded-xl text-[#00B4D8] shrink-0 border border-sky-400/20">
-                  <ShieldAlert className="h-5 w-5 text-sky-200" />
+                <div className="p-2 bg-[#FF6B4A]/10 rounded-xl text-[#FF8A6E] shrink-0 border border-[#FF8A6E]/20">
+                  <ShieldAlert className="h-5 w-5 text-[#FFD3C9]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#00B4D8] mb-0 leading-none">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#FF8A6E] mb-0 leading-none">
                     <AnimatedCounter target={100} suffix="%" />
                   </p>
-                  <p className="text-[10px] sm:text-xs text-sky-100/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
+                  <p className="text-[10px] sm:text-xs text-[#FFE8E3]/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
                     Fresh Deliveries Daily
                   </p>
                 </div>
@@ -207,7 +207,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
             </div>
 
             {/* Paragraph Description */}
-            <p className="max-w-xl text-center md:text-left text-sm sm:text-base md:text-[21px] text-sky-100/90 leading-relaxed font-sans font-light">
+            <p className="max-w-xl text-center md:text-left text-sm sm:text-base md:text-[21px] text-[#FFE8E3]/90 leading-relaxed font-sans font-light">
               Skip crowded fish markets. Order premium fresh seafood sourced directly from trusted fishermen and delivered to your doorstep within hours of the morning catch.
             </p>
           </motion.div>
@@ -220,7 +220,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
             <button
               id="hero-shop-btn"
               onClick={onShopClick}
-              className="w-full sm:w-auto px-8 py-4 bg-[#0077B6] hover:bg-[#0096C7] text-white font-bold text-sm rounded-2xl shadow-xl shadow-sky-950/40 hover:shadow-sky-500/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5 cursor-pointer border border-[#0096C7]"
+              className="w-full sm:w-auto px-8 py-4 bg-[#FF6B4A] hover:bg-[#E85A3A] text-white font-bold text-sm rounded-2xl shadow-xl shadow-[#09172B]/40 hover:shadow-[#FF6B4A]/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5 cursor-pointer border border-[#E85A3A]"
             >
               <ShoppingBag className="h-4.5 w-4.5" />
               <span>Shop Today's Catch</span>
@@ -230,7 +230,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
               onClick={onExploreClick}
               className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 active:bg-white/15 text-white font-bold text-sm rounded-2xl border border-white/20 hover:border-white/30 backdrop-blur-sm transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5 cursor-pointer"
             >
-              <Compass className="h-4.5 w-4.5 text-sky-300" />
+              <Compass className="h-4.5 w-4.5 text-[#FFB19E]" />
               <span>Explore Marketplace</span>
             </button>
           </motion.div>
@@ -241,7 +241,7 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.5, duration: 1 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mt-10 pt-8 border-t border-white/10 text-xs tracking-wide text-sky-200/70 font-mono font-medium"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mt-10 pt-8 border-t border-white/10 text-xs tracking-wide text-[#FFD3C9]/70 font-mono font-medium"
         >
           <div className="flex items-center justify-center gap-2">
             <span className="text-emerald-400 font-bold">✓</span> CHEMICAL-FREE

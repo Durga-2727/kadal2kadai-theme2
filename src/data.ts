@@ -102,7 +102,7 @@ export const TESTIMONIALS: Testimonial[] = [
     city: 'Mylapore',
     quote: 'No messy kitchen work at all. Raw fish was perfectly descaled and ready to throw in the kadaai.',
     rating: 5,
-    avatarColor: 'bg-sky-600'
+    avatarColor: 'bg-[#E85A3A]'
   },
   {
     id: '7',
@@ -166,7 +166,7 @@ export const TESTIMONIALS: Testimonial[] = [
     city: 'Royapettah',
     quote: 'Best cut of Vanjaram steaks ever. Perfect thickness of slices and zero blood clutter left inside.',
     rating: 5,
-    avatarColor: 'bg-blue-600'
+    avatarColor: 'bg-[#0B1F3A]'
   }
 ];
 

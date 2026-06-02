@@ -141,7 +141,7 @@ export default function TodayPurchaseSection({
                 <div
                   key={`${p.id}-purchase-${idx}`}
                   id={`purchase-card-${p.id}-${idx}`}
-                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-slate-50/50 rounded-2xl border border-slate-100/85 hover:bg-white hover:border-slate-200/50 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
+                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-[#FFF8F0]/50 rounded-2xl border border-slate-100/85 hover:bg-white hover:border-slate-200/50 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
                   onClick={() => onSelectProduct(p)}
                 >
                   {/* Image Block */}
@@ -158,7 +158,7 @@ export default function TodayPurchaseSection({
 
                     {/* Left Badges */}
                     <div className="absolute top-2.5 left-2.5 z-25 flex flex-col gap-1.5">
-                      <span className="bg-[#0077B6] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
+                      <span className="bg-[#FF6B4A] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
                         <Zap className="w-2.5 h-2.5 text-yellow-300 fill-yellow-300" />
                         <span>Recently Bought</span>
                       </span>
@@ -211,7 +211,7 @@ export default function TodayPurchaseSection({
                             id={`purchase-weight-select-${p.id}-${idx}`}
                             value={weightSelected}
                             onChange={(e) => handleWeightChange(p.id, e.target.value)}
-                            className="bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-emerald-500 transition-all"
+                            className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-emerald-500 transition-all"
                           >
                             {p.availableWeights.map(w => (
                               <option key={w} value={w}>{w}</option>
@@ -230,7 +230,7 @@ export default function TodayPurchaseSection({
                               id={`purchase-processing-select-${p.id}-${idx}`}
                               value={processingSelected}
                               onChange={(e) => handleProcessingChange(p.id, e.target.value)}
-                              className="bg-slate-50 border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer"
+                              className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer"
                             >
                               {p.processingOptions.map(o => (
                                 <option key={o} value={o}>{o}</option>

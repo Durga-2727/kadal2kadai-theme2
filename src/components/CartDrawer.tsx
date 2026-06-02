@@ -67,11 +67,11 @@ export default function CartDrawer({
             className="w-full max-w-md h-full bg-white shadow-2xl flex flex-col justify-between"
           >
             {/* Header column */}
-            <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-[#03045E] text-white">
+            <div className="p-6 border-b border-gray-100 flex items-center justify-between bg-[#0B1F3A] text-white">
               <div className="flex items-center gap-2">
-                <ShoppingBag className="h-5 w-5 text-sky-300" />
+                <ShoppingBag className="h-5 w-5 text-[#FFB19E]" />
                 <h3 className="font-serif text-lg font-bold">Your Seafood Basket</h3>
-                <span className="bg-sky-500/20 text-sky-200 text-xs px-2 py-0.5 rounded-full font-bold">
+                <span className="bg-[#FF6B4A]/20 text-[#FFD3C9] text-xs px-2 py-0.5 rounded-full font-bold">
                   {cart.length} Sourced Packs
                 </span>
               </div>
@@ -109,7 +109,7 @@ export default function CartDrawer({
                   <div
                     key={item.id}
                     id={`cart-item-${item.id}`}
-                    className="bg-slate-50 border border-slate-100 p-3 sm:p-4 rounded-2xl flex gap-3.5 items-center justify-between relative group overflow-hidden"
+                    className="bg-[#FFF8F0] border border-slate-100 p-3 sm:p-4 rounded-2xl flex gap-3.5 items-center justify-between relative group overflow-hidden"
                   >
                     {/* Item Thumbnail */}
                     <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-200 shrink-0">
@@ -124,7 +124,7 @@ export default function CartDrawer({
 
                     {/* Middle details column */}
                     <div className="flex-1 truncate">
-                      <span className="text-[9px] font-bold text-sky-600 block uppercase font-mono">{item.product.localName}</span>
+                      <span className="text-[9px] font-bold text-[#FF6B4A] block uppercase font-mono">{item.product.localName}</span>
                       <h4 className="text-xs sm:text-sm font-serif font-bold text-slate-800 truncate block">{item.product.name}</h4>
                       <p className="text-[10px] text-slate-400 font-mono tracking-wide mt-0.5 font-medium">
                         Weight: <strong>{item.selectedWeight}</strong> · Cuts: <strong>{item.selectedProcessing}</strong>
@@ -132,7 +132,7 @@ export default function CartDrawer({
 
                       <div className="flex items-center gap-1 mt-2">
                         {/* Qty incrementors */}
-                        <div className="flex items-center bg-white border border-gray-200 rounded-lg py-0.5 px-1 bg-slate-50 shadow-xs">
+                        <div className="flex items-center bg-white border border-gray-200 rounded-lg py-0.5 px-1 bg-[#FFF8F0] shadow-xs">
                           <button
                             id={`cart-qty-dec-${item.id}`}
                             onClick={() => onUpdateQty(item.id, Math.max(1, item.quantity - 1))}
@@ -163,7 +163,7 @@ export default function CartDrawer({
                         <Trash2 className="h-3.5 w-3.5" />
                       </button>
 
-                      <div className="text-xs sm:text-sm font-extrabold text-[#03045E] font-sans mt-2">
+                      <div className="text-xs sm:text-sm font-extrabold text-[#0B1F3A] font-sans mt-2">
                         ₹{item.pricePerUnit * item.quantity}
                       </div>
                     </div>
@@ -175,7 +175,7 @@ export default function CartDrawer({
 
             {/* Bottom summary & actions columns */}
             {cart.length > 0 && (
-              <div className="p-6 border-t border-gray-100 bg-slate-50 space-y-4">
+              <div className="p-6 border-t border-gray-100 bg-[#FFF8F0] space-y-4">
                 
                 {/* Promo Coupon Module */}
                 <div className="space-y-1.5">
@@ -187,7 +187,7 @@ export default function CartDrawer({
                         placeholder="FRESHBOAT"
                         value={promoCode}
                         onChange={(e) => setPromoCode(e.target.value)}
-                        className="w-full pl-8 pr-3 py-2 border border-gray-300 focus:outline-[#0077B6] rounded-xl text-xs bg-white text-slate-800 uppercase font-bold font-mono"
+                        className="w-full pl-8 pr-3 py-2 border border-gray-300 focus:outline-[#FF6B4A] rounded-xl text-xs bg-white text-slate-800 uppercase font-bold font-mono"
                       />
                       <Ticket className="h-4 w-4 absolute left-2.5 top-2.5 text-slate-400" />
                     </div>
@@ -224,7 +224,7 @@ export default function CartDrawer({
                   </div>
                   <div className="flex justify-between items-center text-slate-800 text-sm font-extrabold font-serif pt-2 border-t border-slate-200">
                     <span className="text-slate-900">Immediate Final Billing:</span>
-                    <strong className="text-[#03045E]">₹{finalSubtotal}</strong>
+                    <strong className="text-[#0B1F3A]">₹{finalSubtotal}</strong>
                   </div>
                 </div>
 
@@ -232,7 +232,7 @@ export default function CartDrawer({
                 <button
                   id="checkout-trigger-drawer"
                   onClick={() => onLaunchCheckout(finalSubtotal, discountValue)}
-                  className="w-full bg-[#0077B6] hover:bg-[#0096C7] text-white py-3.5 rounded-2xl text-xs tracking-widest uppercase font-bold shadow-lg shadow-sky-950/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
+                  className="w-full bg-[#FF6B4A] hover:bg-[#E85A3A] text-white py-3.5 rounded-2xl text-xs tracking-widest uppercase font-bold shadow-lg shadow-[#09172B]/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer mt-4"
                 >
                   <span>Proceed to Safe Ordering</span>
                   <ArrowRight className="h-4 w-4" />

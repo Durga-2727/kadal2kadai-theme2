@@ -13,18 +13,18 @@ interface CategorySectionProps {
 
 export default function CategorySection({ onSelectCategory }: CategorySectionProps) {
   return (
-    <section id="categories" className="py-20 bg-slate-50 relative overflow-hidden select-none">
+    <section id="categories" className="py-20 bg-[#FFF8F0] relative overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sky-600 text-xs font-bold font-mono tracking-widest uppercase block mb-2">
+          <span className="text-[#FF6B4A] text-xs font-bold font-mono tracking-widest uppercase block mb-2">
             Pristine Ocean Sourcing
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900 leading-tight">
             Shop by Category
           </h2>
-          <div className="w-12 h-1 bg-[#0077B6] mx-auto mt-4 rounded-full" />
+          <div className="w-12 h-1 bg-[#FF6B4A] mx-auto mt-4 rounded-full" />
           <p className="text-sm text-slate-500 mt-4 leading-relaxed font-sans">
             Every catch is prepared by certified experts to match your customized kitchen preferences. Choose from our premium coastal selections.
           </p>
@@ -55,7 +55,7 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                   />
                   
                   {/* Gradient overlay: transparent top to dark navy bottom */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#03045E]/90 via-[#03045E]/45 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-85" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/45 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-85" />
                 </div>
 
                 {/* Category labels and links */}
@@ -63,7 +63,7 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                   <div className="flex items-center justify-between">
                     <div>
                       {/* Tamil Name Indicator */}
-                      <span className="block text-[11px] font-medium tracking-wider text-sky-300 mb-0.5">
+                      <span className="block text-[11px] font-medium tracking-wider text-[#FFB19E] mb-0.5">
                         {cat.tamilName ? `${cat.tamilName} · ` : ''}{count} Items Available
                       </span>
                       <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-wide">
@@ -71,7 +71,7 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                       </h3>
                     </div>
                     
-                    <div className="bg-sky-500 hover:bg-sky-400 text-white rounded-xl p-2.5 transform translate-x-2 opacity-80 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-md">
+                    <div className="bg-[#FF6B4A] hover:bg-[#FF8A6E] text-white rounded-xl p-2.5 transform translate-x-2 opacity-80 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-md">
                       <ArrowRight className="h-4.5 w-4.5" />
                     </div>
                   </div>
