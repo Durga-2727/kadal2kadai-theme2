@@ -28,19 +28,19 @@ export default function Footer({ onNavigate }: FooterProps) {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#0B1F3A] to-[#01012B] text-white overflow-hidden border-t-2 border-[#FF8A6E]/20">
+    <footer className="relative bg-gradient-to-b from-[#1F2937] to-[#1F2937] text-white overflow-hidden border-t-2 border-[#DC2626]/20">
       
       {/* Dynamic Ambient Sea Waterglow Background elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FF6B4A]/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#0B1F3A]/30 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#DC2626]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#1F2937]/30 rounded-full blur-3xl pointer-events-none" />
       
       {/* Symmetrical Top Wave Line SVG Divider */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#FF8A6E]/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#DC2626]/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 relative z-10">
         
         {/* Main Columns Grid Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10 pb-16 border-b border-[#09172B]/50">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10 pb-16 border-b border-[#1F2937]/50">
           
           {/* Column 1: Brand & Logo Hook */}
           <div className="space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -51,7 +51,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <Logo className="h-40 w-40 shrink-0 drop-shadow-[0_4px_12px_rgba(255,107,74,0.15)]" />
             </div>
             
-            <p className="text-[13px] text-[#FFE8E3]/75 leading-relaxed font-sans font-light max-w-sm">
+            <p className="text-[13px] text-[#FAFAF9]/75 leading-relaxed font-sans font-light max-w-sm">
               South India’s premier digital seafood dock. Sourcing early dawn catches directly from coastal catamarans, packing with absolute cold chain integration.
             </p>
 
@@ -61,7 +61,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                 <button
                   key={social}
                   id={`footer-social-${social.toLowerCase()}`}
-                  className="w-10 h-10 rounded-full bg-[#09172B]/60 border border-[#1B3864]/40 hover:border-[#FF8A6E] hover:bg-[#FF6B4A]/20 text-[#FFB19E] hover:text-white transition-all duration-300 cursor-pointer flex items-center justify-center text-xs font-mono font-bold hover:shadow-[0_0_12px_rgba(255,107,74,0.25)] hover:-translate-y-1"
+                  className="w-10 h-10 rounded-full bg-[#1F2937]/60 border border-[#1F2937]/40 hover:border-[#DC2626] hover:bg-[#DC2626]/20 text-[#DC2626] hover:text-white transition-all duration-300 cursor-pointer flex items-center justify-center text-xs font-mono font-bold hover:shadow-[0_0_12px_rgba(255,107,74,0.25)] hover:-translate-y-1"
                   title={social}
                 >
                   {social.charAt(0)}
@@ -72,10 +72,10 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Column 2: Marketplace Navigation */}
           <div className="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h4 className="text-[#FF8A6E] font-extrabold uppercase tracking-widest text-[12px] font-mono">
+            <h4 className="text-[#DC2626] font-extrabold uppercase tracking-widest text-[12px] font-mono">
               Marketplace
             </h4>
-            <div className="w-8 h-[2px] bg-[#FF8A6E]/40 mx-auto lg:mx-0 rounded-full" />
+            <div className="w-8 h-[2px] bg-[#DC2626]/40 mx-auto lg:mx-0 rounded-full" />
             <ul className="space-y-3 pt-2 w-full flex flex-col items-center lg:items-start">
               {[
                 { name: 'Dawn Sourcing Map', action: 'marketplace-hub' },
@@ -89,7 +89,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   <button
                     id={`footer-market-link-${i}`}
                     onClick={() => onNavigate(link.action)}
-                    className="text-[#FFE8E3]/70 hover:text-white hover:underline decoration-[#FF8A6E] decoration-2 underline-offset-4 transition-all text-xs font-sans font-medium cursor-pointer"
+                    className="text-[#FAFAF9]/70 hover:text-white hover:underline decoration-[#FF8A6E] decoration-2 underline-offset-4 transition-all text-xs font-sans font-medium cursor-pointer"
                   >
                     {link.name}
                   </button>
@@ -100,10 +100,10 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Column 3: High-Touch Support & Help Desk Links */}
           <div className="space-y-4 flex flex-col items-center lg:items-start text-center lg:text-left">
-            <h4 className="text-[#FF8A6E] font-extrabold uppercase tracking-widest text-[12px] font-mono">
+            <h4 className="text-[#DC2626] font-extrabold uppercase tracking-widest text-[12px] font-mono">
               Support & Help
             </h4>
-            <div className="w-8 h-[2px] bg-[#FF8A6E]/40 mx-auto lg:mx-0 rounded-full" />
+            <div className="w-8 h-[2px] bg-[#DC2626]/40 mx-auto lg:mx-0 rounded-full" />
             <ul className="space-y-3 pt-2 w-full flex flex-col items-center lg:items-start">
               {[
                 { name: 'Contact Command Desk', action: 'direct-support' },
@@ -116,7 +116,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   <button
                     id={`footer-support-link-${i}`}
                     onClick={() => setSupportMsg(`Kadal 2 Kadaai Sourcing Support Desk: Sourced at dawn logistics coverage.\nOperational hours: 6:00 AM - 10:00 PM.\nWhatsApp Support: +91 90050 40030.`)}
-                    className="text-[#FFE8E3]/70 hover:text-white hover:underline decoration-[#FF8A6E] decoration-2 underline-offset-4 transition-all text-xs font-sans font-medium cursor-pointer text-center lg:text-left"
+                    className="text-[#FAFAF9]/70 hover:text-white hover:underline decoration-[#FF8A6E] decoration-2 underline-offset-4 transition-all text-xs font-sans font-medium cursor-pointer text-center lg:text-left"
                   >
                     {link.name}
                   </button>
@@ -128,11 +128,11 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Column 4: High-Convert Premium Newsletter Frame */}
           <div className="space-y-5 flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="space-y-1.5 w-full flex flex-col items-center lg:items-start">
-              <h4 className="text-[#FF8A6E] font-extrabold uppercase tracking-widest text-[12px] font-mono">
+              <h4 className="text-[#DC2626] font-extrabold uppercase tracking-widest text-[12px] font-mono">
                 Direct Dawn Memo
               </h4>
-              <div className="w-8 h-[2px] bg-[#FF8A6E]/40 mx-auto lg:mx-0 rounded-full" />
-              <p className="text-[11px] text-[#FFE8E3]/60 leading-normal font-sans pt-1 max-w-sm">
+              <div className="w-8 h-[2px] bg-[#DC2626]/40 mx-auto lg:mx-0 rounded-full" />
+              <p className="text-[11px] text-[#FAFAF9]/60 leading-normal font-sans pt-1 max-w-sm">
                 Sign up to receive early morning daily auction alerts and live catamaran catalog discounts.
               </p>
             </div>
@@ -145,26 +145,26 @@ export default function Footer({ onNavigate }: FooterProps) {
                   placeholder="name@email.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-12 py-3 bg-[#09172B]/50 border border-[#132B4F] focus:border-[#FF8A6E] focus:ring-1 focus:ring-[#FF8A6E]/30 focus:outline-none rounded-xl text-xs text-white placeholder-[#FFB19E]/30 transition-all font-sans"
+                  className="w-full pl-10 pr-12 py-3 bg-[#1F2937]/50 border border-[#1F2937] focus:border-[#DC2626] focus:ring-1 focus:ring-[#DC2626]/30 focus:outline-none rounded-xl text-xs text-white placeholder-[#FFB19E]/30 transition-all font-sans"
                 />
-                <Mail className="h-4 w-4 absolute left-3.5 top-3.5 text-[#FFB19E]/40" />
+                <Mail className="h-4 w-4 absolute left-3.5 top-3.5 text-[#DC2626]/40" />
                 <button
                   id="footer-subscribe-btn"
                   type="submit"
-                  className="absolute right-1.5 top-1.5 p-2 bg-[#FF6B4A] hover:bg-[#E85A3A] text-white rounded-lg transition-all cursor-pointer flex items-center justify-center hover:shadow-[0_0_10px_rgba(255,107,74,0.3)] duration-300"
+                  className="absolute right-1.5 top-1.5 p-2 bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-lg transition-all cursor-pointer flex items-center justify-center hover:shadow-[0_0_10px_rgba(255,107,74,0.3)] duration-300"
                 >
                   {subscribed ? <Check className="h-3.5 w-3.5 text-white" /> : <Send className="h-3.5 w-3.5 text-white" />}
                 </button>
               </div>
               {subscribed && (
-                <p className="text-[11px] text-emerald-400 font-bold font-sans flex items-center gap-1 justify-center lg:justify-start">
+                <p className="text-[11px] text-[#D6D3D1] font-bold font-sans flex items-center gap-1 justify-center lg:justify-start">
                   <span>✓ Verified. Sourcing alerts routed to mailbox!</span>
                 </p>
               )}
             </form>
 
-            <div className="flex items-center gap-2 text-[10.5px] leading-relaxed text-[#FFD3C9]/50 pt-3 border-t border-[#09172B] w-full justify-center lg:justify-start">
-              <Phone className="h-3.5 w-3.5 text-[#FF8A6E]" strokeWidth={2.5} />
+            <div className="flex items-center gap-2 text-[10.5px] leading-relaxed text-[#D6D3D1]/50 pt-3 border-t border-[#1F2937] w-full justify-center lg:justify-start">
+              <Phone className="h-3.5 w-3.5 text-[#DC2626]" strokeWidth={2.5} />
               <span className="font-mono tracking-wide">Support Core: +91 90050 40030</span>
             </div>
           </div>
@@ -172,7 +172,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Footer Deep-Bottom Corporate Bar */}
-        <div className="pt-8 text-xs text-[#FFD3C9]/40 font-mono flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div className="pt-8 text-xs text-[#D6D3D1]/40 font-mono flex flex-col lg:flex-row items-center justify-between gap-6">
           <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-6 text-center lg:text-left">
             <span className="font-sans font-light">© 2026 Kadal 2 Kadaai Foodworks Private Limited</span>
             <div className="flex justify-center gap-3">
@@ -182,9 +182,9 @@ export default function Footer({ onNavigate }: FooterProps) {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 px-3 py-1.5 bg-[#09172B]/40 rounded-xl border border-[#0B1F3A]/40">
-            <ShieldCheck className="h-4 w-4 text-emerald-400" />
-            <span className="text-[11px] font-bold tracking-wider uppercase text-emerald-300 font-mono">Dual Gate Safe SSL Secured</span>
+          <div className="flex items-center gap-2 px-3 py-1.5 bg-[#1F2937]/40 rounded-xl border border-[#1F2937]/40">
+            <ShieldCheck className="h-4 w-4 text-[#D6D3D1]" />
+            <span className="text-[11px] font-bold tracking-wider uppercase text-[#D6D3D1] font-mono">Dual Gate Safe SSL Secured</span>
           </div>
         </div>
 
@@ -192,16 +192,16 @@ export default function Footer({ onNavigate }: FooterProps) {
 
       {/* Modern High-Aesthetic Modal Component replacement for alerts */}
       {supportMsg && (
-        <div className="fixed inset-0 bg-[#020224]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white text-slate-800 p-8 rounded-3xl max-w-md w-full relative border border-slate-100 shadow-2xl flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-[#FF6B4A]/10 mb-4 flex items-center justify-center text-[#FF6B4A]">
+        <div className="fixed inset-0 bg-[#1F2937]/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white text-[#1F2937] p-8 rounded-3xl max-w-md w-full relative border border-[#D6D3D1]/50 shadow-2xl flex flex-col items-center">
+            <div className="w-12 h-12 rounded-full bg-[#DC2626]/10 mb-4 flex items-center justify-center text-[#DC2626]">
               <Anchor className="h-6 w-6" />
             </div>
-            <h4 className="font-serif text-xl font-bold text-[#0B1F3A] mb-3 text-center">Sourcing Helpdesk Info</h4>
-            <p className="text-xs sm:text-sm text-slate-600 font-sans whitespace-pre-line leading-relaxed text-center mb-6">{supportMsg}</p>
+            <h4 className="font-serif text-xl font-bold text-[#1F2937] mb-3 text-center">Sourcing Helpdesk Info</h4>
+            <p className="text-xs sm:text-sm text-[#1F2937]/70 font-sans whitespace-pre-line leading-relaxed text-center mb-6">{supportMsg}</p>
             <button
               onClick={() => setSupportMsg(null)}
-              className="w-full bg-[#0B1F3A] hover:bg-[#FF6B4A] text-white font-extrabold text-xs py-3 rounded-xl cursor-pointer transition-colors shadow-md hover:shadow-[#FF6B4A]/10"
+              className="w-full bg-[#1F2937] hover:bg-[#DC2626] text-white font-extrabold text-xs py-3 rounded-xl cursor-pointer transition-colors shadow-md hover:shadow-[#DC2626]/10"
             >
               Close Information Details
             </button>

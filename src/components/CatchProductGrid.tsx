@@ -120,40 +120,40 @@ export default function CatchProductGrid({
         {/* Header Block */}
         <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-12">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full mb-3 text-[10px] uppercase font-bold text-emerald-700 tracking-wider">
-              <RefreshCw className="h-3 w-3 animate-spin duration-3000 text-emerald-600" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#FAFAF9] border border-[#DC2626]/20 rounded-full mb-3 text-[10px] uppercase font-bold text-[#1F2937] tracking-wider">
+              <RefreshCw className="h-3 w-3 animate-spin duration-3000 text-[#DC2626]" />
               <span>Live: Sourced At Dawn Today</span>
             </div>
-            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-slate-900 tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#1F2937] tracking-tight">
               Today's Fresh Catch
             </h2>
-            <p className="text-sm text-slate-500 mt-2 max-w-xl font-sans">
+            <p className="text-sm text-[#1F2937]/70 mt-2 max-w-xl font-sans">
               Locally sourced directly from ocean boats at 4:30 AM, thoroughly checked for chemical freshness, processed beautifully in sterile corridors.
             </p>
           </div>
 
           {/* Sort Menu */}
-          <div className="flex items-center gap-2 self-start md:self-auto bg-[#FFF8F0] border border-slate-200 p-1.5 rounded-2xl">
-            <span className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider pl-3 font-mono">Sort By:</span>
+          <div className="flex items-center gap-2 self-start md:self-auto bg-[#FAFAF9] border border-[#D6D3D1] p-1.5 rounded-2xl">
+            <span className="text-[11px] font-semibold text-[#1F2937]/70 uppercase tracking-wider pl-3 font-mono">Sort By:</span>
             <div className="relative">
               <select
                 id="catch-sort-select"
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-transparent text-xs font-bold text-slate-800 pr-8 pl-2 py-1.5 focus:outline-none appearance-none cursor-pointer"
+                className="bg-transparent text-xs font-bold text-[#1F2937] pr-8 pl-2 py-1.5 focus:outline-none appearance-none cursor-pointer"
               >
                 <option value="popular">Most Popular</option>
                 <option value="price-low">Price Low to High</option>
                 <option value="price-high">Price High to Low</option>
                 <option value="fresh">Freshness Priority</option>
               </select>
-              <ChevronDown className="h-4.5 w-4.5 absolute right-2 top-1.5 pointer-events-none text-slate-600" />
+              <ChevronDown className="h-4.5 w-4.5 absolute right-2 top-1.5 pointer-events-none text-[#1F2937]/70" />
             </div>
           </div>
         </div>
 
         {/* Filter Pills Tab bar */}
-        <div className="flex items-center gap-3 overflow-x-auto pb-5 mb-10 scrollbar-none border-b border-slate-100">
+        <div className="flex items-center gap-3 overflow-x-auto pb-5 mb-10 scrollbar-none border-b border-[#D6D3D1]/50">
           {filterPills.map((pill) => (
             <button
               key={pill.id}
@@ -161,8 +161,8 @@ export default function CatchProductGrid({
               onClick={() => setSelectedCategory(pill.id)}
               className={`px-7 py-3 rounded-2xl text-sm sm:text-base md:text-lg font-extrabold tracking-wider cursor-pointer transition-all duration-300 ${
                 selectedCategory === pill.id
-                  ? 'bg-[#FF6B4A] text-white shadow-lg shadow-[#0B1F3A]/10 scale-105'
-                  : 'bg-[#FFF8F0] hover:bg-slate-100 text-slate-600 hover:shadow-md'
+                  ? 'bg-[#DC2626] text-white shadow-lg shadow-[#1F2937]/10 scale-105'
+                  : 'bg-[#FAFAF9] hover:bg-[#FAFAF9] text-[#1F2937]/70 hover:shadow-md'
               }`}
             >
               {pill.label}
@@ -171,24 +171,24 @@ export default function CatchProductGrid({
         </div>
 
         {/* Dynamic Catalog Results Header */}
-        <div className="flex justify-between items-center mb-6 text-xs text-slate-400 font-mono">
+        <div className="flex justify-between items-center mb-6 text-xs text-[#1F2937]/50 font-mono">
           <span>Showing {paginatedProducts.length} of {processedProducts.length} seafood selections</span>
           {searchTerm && <span>Filtered by: "{searchTerm}"</span>}
         </div>
 
         {/* No Results Block */}
         {processedProducts.length === 0 && (
-          <div className="text-center py-20 bg-[#FFF8F0] rounded-3xl p-6">
-            <ShoppingCart className="h-12 w-12 text-slate-300 mx-auto mb-4" />
-            <h4 className="text-slate-800 font-serif text-lg font-bold">No seafood found</h4>
-            <p className="text-xs text-slate-500 mt-1 max-w-sm mx-auto">We couldn't find matching items. Please adjust filters or clear the active product text search bar.</p>
+          <div className="text-center py-20 bg-[#FAFAF9] rounded-3xl p-6">
+            <ShoppingCart className="h-12 w-12 text-[#D6D3D1] mx-auto mb-4" />
+            <h4 className="text-[#1F2937] font-serif text-lg font-bold">No seafood found</h4>
+            <p className="text-xs text-[#1F2937]/70 mt-1 max-w-sm mx-auto">We couldn't find matching items. Please adjust filters or clear the active product text search bar.</p>
             <button
               id="clear-filters-btn"
               onClick={() => {
                 setSelectedCategory('all');
                 setSortBy('popular');
               }}
-              className="mt-4 px-4 py-2 bg-slate-800 hover:bg-slate-900 text-white rounded-xl text-xs font-semibold cursor-pointer"
+              className="mt-4 px-4 py-2 bg-[#1F2937] hover:bg-[#1F2937] text-white rounded-xl text-xs font-semibold cursor-pointer"
             >
               Reset Category Filters
             </button>
@@ -217,11 +217,11 @@ export default function CatchProductGrid({
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4 }}
-                  className="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative"
+                  className="group bg-white rounded-2xl border border-[#D6D3D1]/50 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative"
                 >
                   
                   {/* Image Container */}
-                  <div className="relative aspect-square overflow-hidden bg-slate-100 select-none cursor-pointer" onClick={() => onSelectProduct(p)}>
+                  <div className="relative aspect-square overflow-hidden bg-[#FAFAF9] select-none cursor-pointer" onClick={() => onSelectProduct(p)}>
                     <ProductImage
                       productId={p.id}
                       src={p.images[0]}
@@ -235,13 +235,13 @@ export default function CatchProductGrid({
                     {/* Left Badges */}
                     <div className="absolute top-3 left-3 z-25 flex flex-col gap-1.5">
                       {isFresh && (
-                        <span className="bg-[#52B788] text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-sm font-sans">
+                        <span className="bg-[#DC2626] text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-sm font-sans">
                           <Clock className="w-3 h-3" />
                           <span>Fresh Today</span>
                         </span>
                       )}
                       {isBest && (
-                        <span className="bg-[#F4A261] text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-lg flex items-center shadow-sm font-sans">
+                        <span className="bg-[#DC2626] text-white text-[10px] font-bold tracking-wider uppercase px-2.5 py-1 rounded-lg flex items-center shadow-sm font-sans">
                           Best Seller
                         </span>
                       )}
@@ -254,9 +254,9 @@ export default function CatchProductGrid({
                         e.stopPropagation();
                         onToggleWishlist(p.id);
                       }}
-                      className="absolute top-3 right-3 z-25 p-2 bg-white/70 hover:bg-white backdrop-blur-md text-gray-700 hover:text-rose-500 rounded-xl transition-all cursor-pointer shadow-sm"
+                      className="absolute top-3 right-3 z-25 p-2 bg-white/70 hover:bg-white backdrop-blur-md text-[#1F2937]/80 hover:text-[#DC2626] rounded-xl transition-all cursor-pointer shadow-sm"
                     >
-                      <Heart className={`w-4 h-4 ${isWishlisted ? 'fill-rose-500 text-rose-500' : ''}`} />
+                      <Heart className={`w-4 h-4 ${isWishlisted ? 'fill-[#DC2626] text-[#DC2626]' : ''}`} />
                     </button>
 
                     {/* Location Badge */}
@@ -270,12 +270,12 @@ export default function CatchProductGrid({
                     <div>
                       {/* Sub-label & rating */}
                       <div className="flex items-center justify-between gap-2 mb-1">
-                        <span className="text-[10px] font-bold tracking-widest text-[#FF6B4A] uppercase font-mono">
+                        <span className="text-[10px] font-bold tracking-widest text-[#DC2626] uppercase font-mono">
                           {p.localName}
                         </span>
                         <div className="flex items-center gap-1 font-sans">
-                          <span className="text-amber-500 text-xs font-bold">★</span>
-                          <span className="text-[11px] font-semibold text-slate-700">{p.rating}</span>
+                          <span className="text-[#DC2626] text-xs font-bold">★</span>
+                          <span className="text-[11px] font-semibold text-[#1F2937]/80">{p.rating}</span>
                         </div>
                       </div>
 
@@ -283,64 +283,64 @@ export default function CatchProductGrid({
                       <button
                         id={`product-title-${p.id}`}
                         onClick={() => onSelectProduct(p)}
-                        className="font-serif text-base font-bold text-slate-800 tracking-tight hover:text-[#FF6B4A] text-left block w-full truncate focus:outline-none cursor-pointer"
+                        className="font-serif text-base font-bold text-[#1F2937] tracking-tight hover:text-[#DC2626] text-left block w-full truncate focus:outline-none cursor-pointer"
                       >
                         {p.name}
                       </button>
 
                       {/* Snippet Description */}
-                      <p className="text-[11px] text-slate-500 font-light mt-1.5 leading-relaxed line-clamp-2">
+                      <p className="text-[11px] text-[#1F2937]/70 font-light mt-1.5 leading-relaxed line-clamp-2">
                         {p.description}
                       </p>
 
                       {/* Weight Selector */}
                       <div className="mt-4 flex items-center justify-between gap-1 group/select">
-                        <span className="text-[11px] font-medium text-slate-400 font-mono">Select Weight:</span>
+                        <span className="text-[11px] font-medium text-[#1F2937]/50 font-mono">Select Weight:</span>
                         <div className="relative">
                           <select
                             id={`weight-select-${p.id}`}
                             value={weightSelected}
                             onChange={(e) => handleWeightChange(p.id, e.target.value)}
-                            className="bg-[#FFF8F0] border border-slate-200 text-[11px] font-bold text-slate-700 pr-6 pl-2 py-1 rounded-lg appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF6B4A] transition-colors"
+                            className="bg-[#FAFAF9] border border-[#D6D3D1] text-[11px] font-bold text-[#1F2937]/80 pr-6 pl-2 py-1 rounded-lg appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#DC2626] transition-colors"
                           >
                             {p.availableWeights.map(w => (
                               <option key={w} value={w}>{w}</option>
                             ))}
                           </select>
-                          <ChevronDown className="h-3 w-3 absolute right-1.5 top-1.5 pointer-events-none text-slate-400" />
+                          <ChevronDown className="h-3 w-3 absolute right-1.5 top-1.5 pointer-events-none text-[#1F2937]/50" />
                         </div>
                       </div>
 
                       {/* Processing Selector (if available) */}
                       {p.processingOptions.length > 0 && (
                         <div className="mt-2 flex items-center justify-between gap-1 group/select">
-                          <span className="text-[11px] font-medium text-slate-400 font-mono">Cuts:</span>
+                          <span className="text-[11px] font-medium text-[#1F2937]/50 font-mono">Cuts:</span>
                           <div className="relative">
                             <select
                               id={`processing-select-${p.id}`}
                               value={processingSelected}
                               onChange={(e) => handleProcessingChange(p.id, e.target.value)}
-                              className="bg-[#FFF8F0] border border-slate-200 text-[11px] font-bold text-slate-700 pr-6 pl-2 py-1 rounded-lg appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF6B4A] transition-colors"
+                              className="bg-[#FAFAF9] border border-[#D6D3D1] text-[11px] font-bold text-[#1F2937]/80 pr-6 pl-2 py-1 rounded-lg appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#DC2626] transition-colors"
                             >
                               {p.processingOptions.map(o => (
                                 <option key={o} value={o}>{o}</option>
                               ))}
                             </select>
-                            <ChevronDown className="h-3 w-3 absolute right-1.5 top-1.5 pointer-events-none text-slate-400" />
+                            <ChevronDown className="h-3 w-3 absolute right-1.5 top-1.5 pointer-events-none text-[#1F2937]/50" />
                           </div>
                         </div>
                       )}
                     </div>
 
                     {/* Bottom controls */}
-                    <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <div className="mt-5 pt-3 border-t border-[#D6D3D1]/50 flex items-center justify-between">
                       {/* Price column */}
                       <div className="flex flex-col">
                         <div className="flex items-baseline gap-1">
-                          <span className="text-sm font-bold text-[#0B1F3A]">₹</span>
-                          <span className="text-lg font-bold text-[#0B1F3A]">{currentPrice}</span>
+                          <span className="text-sm font-bold text-[#1F2937]">₹</span>
+                          <span className="text-lg font-bold text-[#1F2937]">{currentPrice}</span>
                         </div>
-                        <span className="text-[10px] text-slate-400 tracking-wide font-mono font-medium">/{weightSelected} pack</span>
+                        <span className="text-[10px] text-[#1F2937]/50 tracking-wide font-mono font-medium">/{weightSelected} pack</span>
                       </div>
 
                       {/* Cart CTA */}
@@ -349,8 +349,8 @@ export default function CatchProductGrid({
                         onClick={() => triggerAddToCart(p)}
                         className={`px-4 py-2.5 rounded-xl cursor-pointer text-xs font-bold transition-all duration-300 flex items-center justify-center gap-1.5 shadow-sm ${
                           isFirstAdded
-                            ? 'bg-[#52B788] text-white shadow-emerald-100'
-                            : 'bg-gradient-to-r from-orange-500 to-amber-500 text-white hover:from-orange-600 hover:to-amber-600 hover:shadow-md shadow-orange-100'
+                            ? 'bg-[#DC2626] text-white shadow-[#DC2626]/20'
+                            : 'bg-gradient-to-r from-[#1F2937] to-[#DC2626] text-white hover:from-[#1F2937] hover:to-[#DC2626] hover:shadow-md shadow-[#DC2626]/20'
                         }`}
                       >
                         {isFirstAdded ? (

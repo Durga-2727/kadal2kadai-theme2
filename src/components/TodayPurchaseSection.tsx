@@ -101,20 +101,20 @@ export default function TodayPurchaseSection({
   return (
     <section id="recent-purchases" className="py-10 sm:py-12 bg-white overflow-hidden relative">
       {/* Background soft styling lines for sea concept */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-slate-100 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6D3D1] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-emerald-700 tracking-wider font-mono">
-            <PackageCheck className="h-4.5 w-4.5 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FAFAF9] border border-[#DC2626]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#1F2937] tracking-wider font-mono">
+            <PackageCheck className="h-4.5 w-4.5 text-[#DC2626]" />
             <span>Community Social Proof</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-[#1F2937] tracking-tight">
             Today's Purchases
           </h2>
-          <div className="w-16 h-1 bg-emerald-500 mx-auto mt-4 rounded-full" />
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
+          <div className="w-16 h-1 bg-[#FAFAF9]0 mx-auto mt-4 rounded-full" />
+          <p className="text-xs sm:text-sm text-[#1F2937]/70 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
             Real-time visual diary of what other coastal lovers are cooking right now in their Chennai kitchens. Direct from Dawn, dispatched to home.
           </p>
         </div>
@@ -141,11 +141,11 @@ export default function TodayPurchaseSection({
                 <div
                   key={`${p.id}-purchase-${idx}`}
                   id={`purchase-card-${p.id}-${idx}`}
-                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-[#FFF8F0]/50 rounded-2xl border border-slate-100/85 hover:bg-white hover:border-slate-200/50 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
+                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-[#FAFAF9]/50 rounded-2xl border border-[#D6D3D1]/50/85 hover:bg-white hover:border-[#D6D3D1]/50 hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
                   onClick={() => onSelectProduct(p)}
                 >
                   {/* Image Block */}
-                  <div className="relative aspect-square overflow-hidden bg-slate-100 select-none">
+                  <div className="relative aspect-square overflow-hidden bg-[#FAFAF9] select-none">
                     <ProductImage
                       productId={p.id}
                       src={p.images[0]}
@@ -158,15 +158,15 @@ export default function TodayPurchaseSection({
 
                     {/* Left Badges */}
                     <div className="absolute top-2.5 left-2.5 z-25 flex flex-col gap-1.5">
-                      <span className="bg-[#FF6B4A] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
-                        <Zap className="w-2.5 h-2.5 text-yellow-300 fill-yellow-300" />
+                      <span className="bg-[#DC2626] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
+                        <Zap className="w-2.5 h-2.5 text-[#DC2626] fill-[#DC2626]" />
                         <span>Recently Bought</span>
                       </span>
                     </div>
 
                     {/* Social proof absolute countdown strip */}
-                    <div className="absolute bottom-2.5 left-2.5 z-20 text-[9px] font-bold font-sans text-white bg-emerald-600/90 backdrop-blur-xs px-2.5 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
-                      <span className="w-1.5 h-1.5 bg-emerald-300 rounded-full animate-ping" />
+                    <div className="absolute bottom-2.5 left-2.5 z-20 text-[9px] font-bold font-sans text-white bg-[#DC2626]/90 backdrop-blur-xs px-2.5 py-0.5 rounded-lg flex items-center gap-1 shadow-sm">
+                      <span className="w-1.5 h-1.5 bg-[#D6D3D1] rounded-full animate-ping" />
                       <span>{stats.count} households bought today</span>
                     </div>
                   </div>
@@ -176,28 +176,28 @@ export default function TodayPurchaseSection({
                     <div>
                       {/* Sub-label and Popularity Indicator */}
                       <div className="flex items-center justify-between gap-1 mb-1">
-                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-emerald-600 uppercase font-mono block max-w-[120px] truncate">
+                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#DC2626] uppercase font-mono block max-w-[120px] truncate">
                           {p.localName}
                         </span>
-                        <span className="text-[9px] font-bold text-slate-500 font-sans tracking-wide shrink-0">
+                        <span className="text-[9px] font-bold text-[#1F2937]/70 font-sans tracking-wide shrink-0">
                           {stats.popularityLabel}
                         </span>
                       </div>
 
                       {/* Name of Product */}
-                      <p className="font-serif text-sm sm:text-base font-bold text-slate-800 tracking-tight group-hover:text-emerald-600 transition-colors truncate">
+                      <p className="font-serif text-sm sm:text-base font-bold text-[#1F2937] tracking-tight group-hover:text-[#DC2626] transition-colors truncate">
                         {p.name}
                       </p>
 
                       {/* Dynamic demand indicator bar */}
                       <div className="mt-3">
-                        <div className="flex items-center justify-between text-[8px] sm:text-[9px] font-medium font-mono text-slate-400 mb-1">
+                        <div className="flex items-center justify-between text-[8px] sm:text-[9px] font-medium font-mono text-[#1F2937]/50 mb-1">
                           <span>Demand Level:</span>
-                          <span className="font-bold text-slate-700">{stats.demandPercentage}%</span>
+                          <span className="font-bold text-[#1F2937]/80">{stats.demandPercentage}%</span>
                         </div>
-                        <div className="w-full h-1 bg-slate-200/60 rounded-full overflow-hidden">
+                        <div className="w-full h-1 bg-[#D6D3D1]/60 rounded-full overflow-hidden">
                           <div 
-                            className="h-full bg-emerald-500 rounded-full transition-all duration-1000" 
+                            className="h-full bg-[#FAFAF9]0 rounded-full transition-all duration-1000" 
                             style={{ width: `${stats.demandPercentage}%` }}
                           />
                         </div>
@@ -205,51 +205,51 @@ export default function TodayPurchaseSection({
 
                       {/* Weight Selector */}
                       <div className="mt-3.5 flex items-center justify-between gap-1 group/select" onClick={(e) => e.stopPropagation()}>
-                        <span className="text-[10px] font-medium text-slate-400 font-mono">Weight:</span>
+                        <span className="text-[10px] font-medium text-[#1F2937]/50 font-mono">Weight:</span>
                         <div className="relative">
                           <select
                             id={`purchase-weight-select-${p.id}-${idx}`}
                             value={weightSelected}
                             onChange={(e) => handleWeightChange(p.id, e.target.value)}
-                            className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-emerald-500 transition-all"
+                            className="bg-[#FAFAF9] border border-[#D6D3D1]/50 text-[10px] font-bold text-[#1F2937]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#DC2626] transition-all"
                           >
                             {p.availableWeights.map(w => (
                               <option key={w} value={w}>{w}</option>
                             ))}
                           </select>
-                          <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-slate-400" />
+                          <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#1F2937]/50" />
                         </div>
                       </div>
 
                       {/* Processing options */}
                       {p.processingOptions.length > 0 && (
                         <div className="mt-1.5 flex items-center justify-between gap-1 group/select" onClick={(e) => e.stopPropagation()}>
-                          <span className="text-[10px] font-medium text-slate-400 font-mono font-light">Cuts:</span>
+                          <span className="text-[10px] font-medium text-[#1F2937]/50 font-mono font-light">Cuts:</span>
                           <div className="relative">
                             <select
                               id={`purchase-processing-select-${p.id}-${idx}`}
                               value={processingSelected}
                               onChange={(e) => handleProcessingChange(p.id, e.target.value)}
-                              className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer"
+                              className="bg-[#FAFAF9] border border-[#D6D3D1]/50 text-[10px] font-bold text-[#1F2937]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer"
                             >
                               {p.processingOptions.map(o => (
                                 <option key={o} value={o}>{o}</option>
                               ))}
                             </select>
-                            <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-slate-400" />
+                            <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#1F2937]/50" />
                           </div>
                         </div>
                       )}
                     </div>
 
                     {/* Bottom strip Price & Add Button */}
-                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+                    <div className="mt-4 pt-2.5 border-t border-[#D6D3D1]/50 flex items-center justify-between">
                       <div className="flex flex-col">
                         <div className="flex items-baseline gap-0.5">
-                          <span className="text-xs font-bold text-slate-900">₹</span>
-                          <span className="text-base font-extrabold text-slate-900">{currentPrice}</span>
+                          <span className="text-xs font-bold text-[#1F2937]">₹</span>
+                          <span className="text-base font-extrabold text-[#1F2937]">{currentPrice}</span>
                         </div>
-                        <span className="text-[9px] text-slate-400 font-mono">/{weightSelected}</span>
+                        <span className="text-[9px] text-[#1F2937]/50 font-mono">/{weightSelected}</span>
                       </div>
 
                       <button
@@ -257,8 +257,8 @@ export default function TodayPurchaseSection({
                         onClick={(e) => triggerAddToCart(e, p)}
                         className={`p-2 px-3 rounded-xl cursor-pointer text-[10px] sm:text-xs font-extrabold transition-all duration-300 flex items-center gap-1 shadow-sm ${
                           isFirstAdded
-                            ? 'bg-[#52B788] text-white shadow-emerald-50'
-                            : 'bg-gradient-to-r from-orange-500 to-amber-500 text-white hover:from-orange-600 hover:to-amber-600 hover:shadow-md shadow-orange-100'
+                            ? 'bg-[#DC2626] text-white shadow-[#DC2626]/10'
+                            : 'bg-gradient-to-r from-[#DC2626] to-[#B91C1C] text-white hover:from-[#B91C1C] hover:to-[#991B1B] hover:shadow-md shadow-[#DC2626]/20'
                         }`}
                       >
                         {isFirstAdded ? (

@@ -75,27 +75,27 @@ export default function TopSellingSection({
   };
 
   return (
-    <section id="top-selling" className="py-10 sm:py-12 bg-[#F8FBFD] border-t border-b border-slate-100 overflow-hidden relative">
+    <section id="top-selling" className="py-10 sm:py-12 bg-[#FAFAF9] border-t border-b border-[#D6D3D1]/50 overflow-hidden relative">
       {/* Background Subtle Watermark Rings */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20%" cy="30%" r="200" fill="#FF6B4A" />
-          <circle cx="80%" cy="70%" r="300" fill="#0B1F3A" />
+          <circle cx="20%" cy="30%" r="200" fill="#DC2626" />
+          <circle cx="80%" cy="70%" r="300" fill="#1F2937" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FF6B4A]/10 border border-[#FF6B4A]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#FF6B4A] tracking-wider font-mono">
-            <Award className="h-4.5 w-4.5 text-[#FF6B4A]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#DC2626]/10 border border-[#DC2626]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#DC2626] tracking-wider font-mono">
+            <Award className="h-4.5 w-4.5 text-[#DC2626]" />
             <span>Top Rated & Coveted</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-[#1F2937] tracking-tight">
             Top Selling Seafood
           </h2>
-          <div className="w-16 h-1 bg-[#FF6B4A] mx-auto mt-4 rounded-full" />
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
+          <div className="w-16 h-1 bg-[#DC2626] mx-auto mt-4 rounded-full" />
+          <p className="text-xs sm:text-sm text-[#1F2937]/70 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
             The most sought-after catches, favored by premium chefs and home cooks alike for their exquisite taste, absolute freshness, and immaculate cuts.
           </p>
         </div>
@@ -103,8 +103,8 @@ export default function TopSellingSection({
         {/* Endless Moving Carousel Belt Wrapper */}
         <div className="relative w-full overflow-hidden pause-marquee -mx-4 sm:mx-0">
           {/* Subtle fade-out gradients on left/right edges for premium visual blending */}
-          <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-20 bg-gradient-to-r from-[#F8FBFD] to-transparent z-20 pointer-events-none" />
-          <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-20 bg-gradient-to-l from-[#F8FBFD] to-transparent z-20 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-20 bg-gradient-to-r from-[#FAFAF9] to-transparent z-20 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-20 bg-gradient-to-l from-[#FAFAF9] to-transparent z-20 pointer-events-none" />
 
           {/* Scrolling Marquee Container */}
           <div className="animate-marquee-left flex gap-6 py-4 px-4 sm:px-0">
@@ -120,11 +120,11 @@ export default function TopSellingSection({
                 <div
                   key={`${p.id}-top-${idx}`}
                   id={`top-selling-card-${p.id}-${idx}`}
-                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
+                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-white rounded-2xl border border-[#D6D3D1]/50 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
                   onClick={() => onSelectProduct(p)}
                 >
                   {/* Product Image Stage */}
-                  <div className="relative aspect-square overflow-hidden bg-[#FFF8F0] select-none">
+                  <div className="relative aspect-square overflow-hidden bg-[#FAFAF9] select-none">
                     <ProductImage
                       productId={p.id}
                       src={p.images[0]}
@@ -138,13 +138,13 @@ export default function TopSellingSection({
                     {/* Left Badges */}
                     <div className="absolute top-2.5 left-2.5 z-25 flex flex-col gap-1 sm:gap-1.5">
                       {isFresh && (
-                        <span className="bg-[#52B788] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 sm:gap-1 shadow-sm font-sans">
+                        <span className="bg-[#DC2626] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 sm:gap-1 shadow-sm font-sans">
                           <Clock className="w-2.5 h-2.5" />
                           <span>Fresh</span>
                         </span>
                       )}
-                      <span className="bg-orange-500 text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
-                        <Flame className="w-2.5 h-2.5 text-amber-300 fill-amber-300" />
+                      <span className="bg-[#FAFAF9]0 text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
+                        <Flame className="w-2.5 h-2.5 text-[#DC2626] fill-[#DC2626]" />
                         <span>Best Selling</span>
                       </span>
                     </div>
@@ -156,9 +156,9 @@ export default function TopSellingSection({
                         e.stopPropagation();
                         onToggleWishlist(p.id);
                       }}
-                      className="absolute top-2.5 right-2.5 z-25 p-1.5 sm:p-2 bg-white/70 hover:bg-white backdrop-blur-md text-gray-750 hover:text-rose-500 rounded-xl transition-all cursor-pointer shadow-sm"
+                      className="absolute top-2.5 right-2.5 z-25 p-1.5 sm:p-2 bg-white/70 hover:bg-white backdrop-blur-md text-[#1F2937] hover:text-[#DC2626] rounded-xl transition-all cursor-pointer shadow-sm"
                     >
-                      <Heart className={`w-3.5 h-3.5 ${isWishlisted ? 'fill-rose-500 text-rose-500' : ''}`} />
+                      <Heart className={`w-3.5 h-3.5 ${isWishlisted ? 'fill-[#DC2626] text-[#DC2626]' : ''}`} />
                     </button>
 
                     {/* Location Tag */}
@@ -172,67 +172,67 @@ export default function TopSellingSection({
                     <div>
                       {/* Localized subtag and ratings count */}
                       <div className="flex items-center justify-between gap-1 mb-1">
-                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#FF6B4A] uppercase font-mono block max-w-[120px] truncate">
+                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#DC2626] uppercase font-mono block max-w-[120px] truncate">
                           {p.localName}
                         </span>
                         <div className="flex items-center gap-0.5 font-sans shrink-0">
-                          <span className="text-amber-500 text-[10px] sm:text-xs">★</span>
-                          <span className="text-[10px] font-bold text-slate-700">{p.rating}</span>
+                          <span className="text-[#DC2626] text-[10px] sm:text-xs">★</span>
+                          <span className="text-[10px] font-bold text-[#1F2937]/80">{p.rating}</span>
                         </div>
                       </div>
 
                       {/* Title block */}
-                      <p className="font-serif text-sm sm:text-base font-bold text-slate-800 tracking-tight group-hover:text-[#FF6B4A] transition-colors truncate">
+                      <p className="font-serif text-sm sm:text-base font-bold text-[#1F2937] tracking-tight group-hover:text-[#DC2626] transition-colors truncate">
                         {p.name}
                       </p>
 
                       {/* Weight Selector */}
                       <div className="mt-3 flex items-center justify-between gap-1 group/select" onClick={(e) => e.stopPropagation()}>
-                        <span className="text-[10px] font-medium text-slate-400 font-mono">Weight:</span>
+                        <span className="text-[10px] font-medium text-[#1F2937]/50 font-mono">Weight:</span>
                         <div className="relative">
                           <select
                             id={`top-weight-select-${p.id}-${idx}`}
                             value={weightSelected}
                             onChange={(e) => handleWeightChange(p.id, e.target.value)}
-                            className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF6B4A] transition-all"
+                            className="bg-[#FAFAF9] border border-[#D6D3D1]/50 text-[10px] font-bold text-[#1F2937]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#DC2626] transition-all"
                           >
                             {p.availableWeights.map(w => (
                               <option key={w} value={w}>{w}</option>
                             ))}
                           </select>
-                          <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-slate-400" />
+                          <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#1F2937]/50" />
                         </div>
                       </div>
 
                       {/* Cuts Options */}
                       {p.processingOptions.length > 0 && (
                         <div className="mt-1.5 flex items-center justify-between gap-1 group/select" onClick={(e) => e.stopPropagation()}>
-                          <span className="text-[10px] font-medium text-slate-400 font-mono font-light">Cuts:</span>
+                          <span className="text-[10px] font-medium text-[#1F2937]/50 font-mono font-light">Cuts:</span>
                           <div className="relative">
                             <select
                               id={`top-processing-select-${p.id}-${idx}`}
                               value={processingSelected}
                               onChange={(e) => handleProcessingChange(p.id, e.target.value)}
-                              className="bg-[#FFF8F0] border border-slate-100 text-[10px] font-bold text-slate-700 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF6B4A] transition-all"
+                              className="bg-[#FAFAF9] border border-[#D6D3D1]/50 text-[10px] font-bold text-[#1F2937]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#DC2626] transition-all"
                             >
                               {p.processingOptions.map(o => (
                                 <option key={o} value={o}>{o}</option>
                               ))}
                             </select>
-                            <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-slate-400" />
+                            <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#1F2937]/50" />
                           </div>
                         </div>
                       )}
                     </div>
 
                     {/* Price and Cart Action */}
-                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between">
+                    <div className="mt-4 pt-2.5 border-t border-[#D6D3D1]/50 flex items-center justify-between">
                       <div className="flex flex-col">
                         <div className="flex items-baseline gap-0.5">
-                          <span className="text-xs font-bold text-[#0B1F3A]">₹</span>
-                          <span className="text-base font-extrabold text-[#0B1F3A]">{currentPrice}</span>
+                          <span className="text-xs font-bold text-[#1F2937]">₹</span>
+                          <span className="text-base font-extrabold text-[#1F2937]">{currentPrice}</span>
                         </div>
-                        <span className="text-[9px] text-slate-400 tracking-wide font-mono">/{weightSelected}</span>
+                        <span className="text-[9px] text-[#1F2937]/50 tracking-wide font-mono">/{weightSelected}</span>
                       </div>
 
                       <button
@@ -240,8 +240,8 @@ export default function TopSellingSection({
                         onClick={(e) => triggerAddToCart(e, p)}
                         className={`p-2 px-3 rounded-xl cursor-pointer text-[10px] sm:text-xs font-extrabold transition-all duration-300 flex items-center gap-1 shadow-sm ${
                           isFirstAdded
-                            ? 'bg-[#52B788] text-white shadow-emerald-50'
-                            : 'bg-gradient-to-r from-orange-500 to-amber-500 text-white hover:from-orange-600 hover:to-amber-600 hover:shadow-md shadow-orange-100'
+                            ? 'bg-[#DC2626] text-white shadow-[#DC2626]/10'
+                            : 'bg-gradient-to-r from-[#DC2626] to-[#B91C1C] text-white hover:from-[#B91C1C] hover:to-[#991B1B] hover:shadow-md shadow-[#DC2626]/20'
                         }`}
                       >
                         {isFirstAdded ? (

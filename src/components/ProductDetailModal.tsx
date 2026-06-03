@@ -97,34 +97,34 @@ export default function ProductDetailModal({
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -400, opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-slate-100 flex flex-col relative max-h-[85vh]"
+          className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-[#D6D3D1]/50 flex flex-col relative max-h-[85vh]"
           onClick={(e) => e.stopPropagation()}
         >
           
           {/* Sticky Header block */}
-          <div className="flex justify-between items-center px-5 pt-5 pb-3 border-b border-slate-100 bg-white z-20">
+          <div className="flex justify-between items-center px-5 pt-5 pb-3 border-b border-[#D6D3D1]/50 bg-white z-20">
             <div className="pr-8">
-              <span className="bg-emerald-50 border border-emerald-100 text-emerald-800 px-2 py-0.5 rounded-lg text-[9px] font-bold tracking-wider uppercase font-mono block w-fit mb-1">
+              <span className="bg-[#FAFAF9] border border-[#DC2626]/20 text-[#1F2937] px-2 py-0.5 rounded-lg text-[9px] font-bold tracking-wider uppercase font-mono block w-fit mb-1">
                 CHEMICAL-FREE
               </span>
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-slate-900 tracking-tight leading-tight">
+              <h2 className="font-serif text-lg sm:text-xl font-bold text-[#1F2937] tracking-tight leading-tight">
                 {product.name}
               </h2>
-              <span className="text-[10px] text-[#FF6B4A] font-bold block mt-0.5 tracking-widest uppercase font-mono">{product.localName}</span>
+              <span className="text-[10px] text-[#DC2626] font-bold block mt-0.5 tracking-widest uppercase font-mono">{product.localName}</span>
             </div>
             <div className="flex items-center gap-1.5 shrink-0">
               <button
                 id="detail-wishlist-toggle"
                 onClick={() => onToggleWishlist(product.id)}
-                className="p-2 bg-[#FFF8F0] hover:bg-slate-100 border border-slate-200 text-gray-700 hover:text-rose-500 rounded-xl transition-all cursor-pointer shadow-xs"
+                className="p-2 bg-[#FAFAF9] hover:bg-[#FAFAF9] border border-[#D6D3D1] text-[#1F2937]/80 hover:text-[#DC2626] rounded-xl transition-all cursor-pointer shadow-xs"
                 title="Add to Wishlist"
               >
-                <Heart className={`h-4 w-4 ${isWishlisted ? 'fill-rose-500 text-rose-500' : ''}`} />
+                <Heart className={`h-4 w-4 ${isWishlisted ? 'fill-[#DC2626] text-[#DC2626]' : ''}`} />
               </button>
               <button
                 id="detail-close-btn"
                 onClick={onClose}
-                className="p-2 bg-[#FFF8F0] hover:bg-slate-100 border border-slate-200 text-slate-800 hover:text-red-650 rounded-xl transition-all cursor-pointer shadow-xs"
+                className="p-2 bg-[#FAFAF9] hover:bg-[#FAFAF9] border border-[#D6D3D1] text-[#1F2937] hover:text-[#DC2626] rounded-xl transition-all cursor-pointer shadow-xs"
                 title="Close details"
               >
                 <X className="h-4 w-4" />
@@ -138,22 +138,22 @@ export default function ProductDetailModal({
             {/* Primary Hero Image & Gallery */}
             <div className="space-y-3">
               <div
-                className="relative aspect-video rounded-2xl overflow-hidden w-full bg-[#FFF8F0] border border-slate-100 shadow-inner group/zoom select-none cursor-zoom-in"
+                className="relative aspect-video rounded-2xl overflow-hidden w-full bg-[#FAFAF9] border border-[#D6D3D1]/50 shadow-inner group/zoom select-none cursor-zoom-in"
                 onClick={() => setIsZoomed(true)}
               >
                 <ProductImage
                   productId={product.id}
                   src={product.images[activeImageIndex] || product.images[0]}
                   alt={product.name}
-                  className="w-full h-full object-contain p-3 bg-[#f8fafc]"
+                  className="w-full h-full object-contain p-3 bg-[#FAFAF9]"
                 />
 
                 {/* Sourcing badges on image */}
                 <div className="absolute bottom-3 left-3 flex gap-1.5">
-                  <span className="bg-[#FF8A6E]/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg shadow-xs">
+                  <span className="bg-[#DC2626]/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg shadow-xs">
                     {product.catchLocation}
                   </span>
-                  <span className="bg-emerald-500/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg flex items-center gap-0.5 shadow-xs">
+                  <span className="bg-[#FAFAF9]0/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg flex items-center gap-0.5 shadow-xs">
                     <ShieldCheck className="h-3 w-3" />
                     <span>Dawn Sourced</span>
                   </span>
@@ -173,7 +173,7 @@ export default function ProductDetailModal({
                       key={idx}
                       id={`thumbnail-selector-${idx}`}
                       className={`w-14 h-11 rounded-lg overflow-hidden border-2 transition-all shrink-0 cursor-pointer ${
-                        activeImageIndex === idx ? 'border-[#FF6B4A] scale-102 shadow-xs' : 'border-slate-200 opacity-70 hover:opacity-100'
+                        activeImageIndex === idx ? 'border-[#DC2626] scale-102 shadow-xs' : 'border-[#D6D3D1] opacity-70 hover:opacity-100'
                       }`}
                       onClick={() => setActiveImageIndex(idx)}
                     >
@@ -181,7 +181,7 @@ export default function ProductDetailModal({
                         productId={product.id}
                         src={imgUrl}
                         alt={`${product.name} thumbnail`}
-                        className="w-full h-full object-contain p-0.5 bg-[#f8fafc]"
+                        className="w-full h-full object-contain p-0.5 bg-[#FAFAF9]"
                         showUploadButton={false}
                       />
                     </button>
@@ -191,41 +191,41 @@ export default function ProductDetailModal({
             </div>
 
             {/* Sourcing Logistics estimates */}
-            <div className="bg-[#FFF8F0] border border-slate-200/50 p-3 rounded-xl grid grid-cols-2 gap-3 text-[10px] font-mono">
+            <div className="bg-[#FAFAF9] border border-[#D6D3D1]/50 p-3 rounded-xl grid grid-cols-2 gap-3 text-[10px] font-mono">
               <div className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5 text-[#FF6B4A] shrink-0" />
+                <Calendar className="h-3.5 w-3.5 text-[#DC2626] shrink-0" />
                 <div>
-                  <span className="text-slate-400 block text-[8px] uppercase">Catch Timeline:</span>
-                  <strong className="text-slate-800">{product.catchDate}</strong>
+                  <span className="text-[#1F2937]/50 block text-[8px] uppercase">Catch Timeline:</span>
+                  <strong className="text-[#1F2937]">{product.catchDate}</strong>
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
-                <MapPin className="h-3.5 w-3.5 text-[#FF6B4A] shrink-0" />
+                <MapPin className="h-3.5 w-3.5 text-[#DC2626] shrink-0" />
                 <div>
-                  <span className="text-slate-400 block text-[8px] uppercase">Catch Location:</span>
-                  <strong className="text-slate-800 truncate block max-w-[100px]">{product.catchLocation}</strong>
+                  <span className="text-[#1F2937]/50 block text-[8px] uppercase">Catch Location:</span>
+                  <strong className="text-[#1F2937] truncate block max-w-[100px]">{product.catchLocation}</strong>
                 </div>
               </div>
             </div>
 
             {/* Sourcing pricing box */}
-            <div className="p-3 bg-[#FFF8F0]/40 border border-[#FFE8E3]/50 rounded-xl flex items-center justify-between">
+            <div className="p-3 bg-[#FAFAF9]/40 border border-[#FAFAF9]/50 rounded-xl flex items-center justify-between">
               <div>
-                <span className="text-[8px] text-slate-400 uppercase font-mono tracking-wider">Sourcing Price:</span>
+                <span className="text-[8px] text-[#1F2937]/50 uppercase font-mono tracking-wider">Sourcing Price:</span>
                 <div className="flex items-baseline gap-1 mt-0.5">
-                  <span className="text-xs font-bold text-[#0B1F3A]">₹</span>
-                  <span className="text-xl font-bold text-[#0B1F3A]">{currentPrice}</span>
-                  <span className="text-[10px] text-slate-400 font-sans">/{selectedWeight} Box</span>
+                  <span className="text-xs font-bold text-[#1F2937]">₹</span>
+                  <span className="text-xl font-bold text-[#1F2937]">{currentPrice}</span>
+                  <span className="text-[10px] text-[#1F2937]/50 font-sans">/{selectedWeight} Box</span>
                 </div>
               </div>
-              <span className="px-2 py-0.5 text-[8px] bg-[#FF6B4A]/10 text-[#26497F] font-bold uppercase rounded-lg font-mono">
+              <span className="px-2 py-0.5 text-[8px] bg-[#DC2626]/10 text-[#1F2937] font-bold uppercase rounded-lg font-mono">
                 Price Locked
               </span>
             </div>
 
             {/* Weight Options Selection pills */}
             <div className="space-y-1.5">
-              <span className="font-bold text-slate-700 uppercase font-mono text-[9px] block">Select Weight:</span>
+              <span className="font-bold text-[#1F2937]/80 uppercase font-mono text-[9px] block">Select Weight:</span>
               <div className="flex flex-wrap gap-1.5">
                 {product.availableWeights.map((w) => {
                   const isSelect = selectedWeight === w;
@@ -236,8 +236,8 @@ export default function ProductDetailModal({
                       onClick={() => setSelectedWeight(w)}
                       className={`px-3 py-1.5 text-[10px] font-bold rounded-lg border transition-all cursor-pointer ${
                         isSelect
-                          ? 'bg-[#FF6B4A] border-[#FF6B4A] text-white shadow-xs'
-                          : 'bg-[#FFF8F0] border-slate-200 text-slate-600 hover:bg-slate-100'
+                          ? 'bg-[#DC2626] border-[#DC2626] text-white shadow-xs'
+                          : 'bg-[#FAFAF9] border-[#D6D3D1] text-[#1F2937]/70 hover:bg-[#FAFAF9]'
                       }`}
                     >
                       {w}
@@ -250,7 +250,7 @@ export default function ProductDetailModal({
             {/* Prepare Cuts Options selector */}
             {product.processingOptions.length > 0 && (
               <div className="space-y-1.5">
-                <span className="font-bold text-slate-700 uppercase font-mono text-[9px] block">Prepare Cuts:</span>
+                <span className="font-bold text-[#1F2937]/80 uppercase font-mono text-[9px] block">Prepare Cuts:</span>
                 <div className="flex flex-wrap gap-1.5">
                   {product.processingOptions.map((o) => {
                     const isSelect = selectedProcessing === o;
@@ -261,8 +261,8 @@ export default function ProductDetailModal({
                         onClick={() => setSelectedProcessing(o)}
                         className={`px-2.5 py-1.5 text-[10px] font-bold rounded-lg border transition-all cursor-pointer ${
                           isSelect
-                            ? 'bg-[#0B1F3A] border-[#0B1F3A] text-white shadow-xs'
-                            : 'bg-[#FFF8F0] border-slate-200/50 text-slate-600 hover:bg-slate-100'
+                            ? 'bg-[#1F2937] border-[#1F2937] text-white shadow-xs'
+                            : 'bg-[#FAFAF9] border-[#D6D3D1]/50 text-[#1F2937]/70 hover:bg-[#FAFAF9]'
                         }`}
                       >
                         {o}
@@ -274,10 +274,10 @@ export default function ProductDetailModal({
             )}
 
             {/* Below Fold Tabs: Detailed Info */}
-            <div className="bg-[#FFF8F0]/50 border border-slate-200/30 rounded-2xl p-4">
+            <div className="bg-[#FAFAF9]/50 border border-[#D6D3D1]/30 rounded-2xl p-4">
               
               {/* Tab headers */}
-              <div className="flex border-b border-gray-200/50 gap-4 mb-3">
+              <div className="flex border-b border-[#D6D3D1]/50 gap-4 mb-3">
                 {[
                   { label: 'Description', id: 'desc' },
                   { label: 'Specs', id: 'specs' },
@@ -288,7 +288,7 @@ export default function ProductDetailModal({
                     id={`detail-tab-${t.id}`}
                     onClick={() => setActiveTab(t.id as any)}
                     className={`pb-1.5 text-[10px] uppercase font-bold border-b-2 font-mono transition-colors cursor-pointer ${
-                      activeTab === t.id ? 'border-[#FF6B4A] text-[#FF6B4A]' : 'border-transparent text-slate-400 hover:text-slate-700'
+                      activeTab === t.id ? 'border-[#DC2626] text-[#DC2626]' : 'border-transparent text-[#1F2937]/50 hover:text-[#1F2937]/80'
                     }`}
                   >
                     {t.label}
@@ -297,14 +297,14 @@ export default function ProductDetailModal({
               </div>
 
               {/* Tab contents */}
-              <div className="text-slate-600 text-xs leading-relaxed">
+              <div className="text-[#1F2937]/70 text-xs leading-relaxed">
                 {activeTab === 'desc' && (
                   <div className="space-y-3 font-sans">
-                    <p className="font-light text-slate-600">
+                    <p className="font-light text-[#1F2937]/70">
                       {product.description}
                     </p>
-                    <div className="p-2.5 bg-white rounded-lg border border-slate-100 flex items-center gap-2 shadow-inner">
-                      <div className="w-8 h-8 bg-[#FFD3C9] rounded-full flex items-center justify-center font-bold text-[#FF6B4A] text-[10px] overflow-hidden shrink-0 border border-[#FFB19E]">
+                    <div className="p-2.5 bg-white rounded-lg border border-[#D6D3D1]/50 flex items-center gap-2 shadow-inner">
+                      <div className="w-8 h-8 bg-[#D6D3D1] rounded-full flex items-center justify-center font-bold text-[#DC2626] text-[10px] overflow-hidden shrink-0 border border-[#DC2626]/20">
                         {product.fisherman.image ? (
                           <img src={product.fisherman.image} alt={product.fisherman.name} className="w-full h-full object-cover" />
                         ) : (
@@ -312,8 +312,8 @@ export default function ProductDetailModal({
                         )}
                       </div>
                       <div className="text-[10px]">
-                        <span className="text-slate-400 block text-[8px] uppercase">Sourced from:</span>
-                        <strong className="text-slate-800 block leading-tight">{product.fisherman.name} ({product.fisherman.location})</strong>
+                        <span className="text-[#1F2937]/50 block text-[8px] uppercase">Sourced from:</span>
+                        <strong className="text-[#1F2937] block leading-tight">{product.fisherman.name} ({product.fisherman.location})</strong>
                       </div>
                     </div>
                   </div>
@@ -322,9 +322,9 @@ export default function ProductDetailModal({
                 {activeTab === 'specs' && (
                   <div className="grid grid-cols-1 gap-2 font-mono text-[10px]">
                     {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between p-2 bg-white border border-slate-100 rounded-lg">
-                        <span className="text-slate-400">{key}:</span>
-                        <strong className="text-slate-800 text-right font-bold">{value}</strong>
+                      <div key={key} className="flex justify-between p-2 bg-white border border-[#D6D3D1]/50 rounded-lg">
+                        <span className="text-[#1F2937]/50">{key}:</span>
+                        <strong className="text-[#1F2937] text-right font-bold">{value}</strong>
                       </div>
                     ))}
                   </div>
@@ -333,18 +333,18 @@ export default function ProductDetailModal({
                 {activeTab === 'reviews' && (
                   <div className="space-y-2">
                     {reviewsList.map((rev, idx) => (
-                      <div key={idx} className="bg-white border border-slate-100 p-2.5 rounded-lg flex justify-between items-start gap-2 shadow-xs">
+                      <div key={idx} className="bg-white border border-[#D6D3D1]/50 p-2.5 rounded-lg flex justify-between items-start gap-2 shadow-xs">
                         <div className="space-y-1">
                           <div className="flex items-center gap-1.5">
-                            <span className="w-4 h-4 rounded-full bg-[#FFE8E3] text-[#26497F] flex items-center justify-center font-bold text-[8px]">
+                            <span className="w-4 h-4 rounded-full bg-[#FAFAF9] text-[#1F2937] flex items-center justify-center font-bold text-[8px]">
                               {rev.name.charAt(0)}
                             </span>
-                            <strong className="text-slate-800 text-[10px] font-semibold">{rev.name}</strong>
-                            <span className="text-[9px] text-slate-400 font-mono">({rev.location})</span>
+                            <strong className="text-[#1F2937] text-[10px] font-semibold">{rev.name}</strong>
+                            <span className="text-[9px] text-[#1F2937]/50 font-mono">({rev.location})</span>
                           </div>
-                          <p className="text-[10px] text-slate-500 font-sans leading-tight">{rev.text}</p>
+                          <p className="text-[10px] text-[#1F2937]/70 font-sans leading-tight">{rev.text}</p>
                         </div>
-                        <span className="bg-emerald-50 px-1 py-0.5 rounded text-[8px] font-bold text-emerald-700 shrink-0">
+                        <span className="bg-[#FAFAF9] px-1 py-0.5 rounded text-[8px] font-bold text-[#1F2937] shrink-0">
                           ★ {rev.rating}
                         </span>
                       </div>
@@ -356,32 +356,32 @@ export default function ProductDetailModal({
 
             {/* Related Catch slider items */}
             {relatedProducts.length > 0 && (
-              <div className="pt-4 border-t border-slate-100">
-                <h4 className="font-serif text-sm font-bold text-slate-900 mb-3">Related catches:</h4>
+              <div className="pt-4 border-t border-[#D6D3D1]/50">
+                <h4 className="font-serif text-sm font-bold text-[#1F2937] mb-3">Related catches:</h4>
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
                   {relatedProducts.map((p) => (
                     <button
                       key={p.id}
                       id={`related-card-${p.id}`}
-                      className="w-36 bg-white border border-slate-100 hover:border-[#FFE8E3] p-2 rounded-xl shadow-xs hover:shadow-sm transition-all duration-300 text-left shrink-0 cursor-pointer flex flex-col justify-between aspect-[3/4]"
+                      className="w-36 bg-white border border-[#D6D3D1]/50 hover:border-[#FAFAF9] p-2 rounded-xl shadow-xs hover:shadow-sm transition-all duration-300 text-left shrink-0 cursor-pointer flex flex-col justify-between aspect-[3/4]"
                       onClick={() => onSelectProduct(p)}
                     >
-                      <div className="aspect-video w-full rounded-lg overflow-hidden bg-[#FFF8F0]">
+                      <div className="aspect-video w-full rounded-lg overflow-hidden bg-[#FAFAF9]">
                         <ProductImage
                           productId={p.id}
                           src={p.images[0]}
                           alt={p.name}
-                          className="w-full h-full object-contain p-1 bg-[#f8fafc]"
+                          className="w-full h-full object-contain p-1 bg-[#FAFAF9]"
                           showUploadButton={false}
                         />
                       </div>
                       <div className="mt-1">
-                        <span className="text-[7px] font-bold text-[#FF6B4A] block uppercase font-mono leading-none">{p.localName}</span>
-                        <h5 className="text-[10px] font-serif font-bold text-slate-850 truncate block mt-0.5 leading-tight">{p.name}</h5>
+                        <span className="text-[7px] font-bold text-[#DC2626] block uppercase font-mono leading-none">{p.localName}</span>
+                        <h5 className="text-[10px] font-serif font-bold text-[#1F2937] truncate block mt-0.5 leading-tight">{p.name}</h5>
                       </div>
-                      <div className="flex justify-between items-center pt-1 border-t border-slate-50 mt-1">
-                        <strong className="text-[10px] font-extrabold text-[#0B1F3A]">₹{p.price}</strong>
-                        <span className="text-[8px] text-[#FF6B4A] font-mono">View →</span>
+                      <div className="flex justify-between items-center pt-1 border-t border-[#FAFAF9] mt-1">
+                        <strong className="text-[10px] font-extrabold text-[#1F2937]">₹{p.price}</strong>
+                        <span className="text-[8px] text-[#DC2626] font-mono">View →</span>
                       </div>
                     </button>
                   ))}
@@ -392,9 +392,9 @@ export default function ProductDetailModal({
           </div>
 
           {/* Sticky Bottom Add to Cart Call to Action */}
-          <div className="p-4 border-t border-slate-100 bg-white z-20 flex flex-col gap-2 shadow-inner">
-            <div className="flex items-center gap-1.5 text-[9px] text-slate-500 font-sans">
-              <Truck className="h-3.5 w-3.5 text-[#FF6B4A] shrink-0" />
+          <div className="p-4 border-t border-[#D6D3D1]/50 bg-white z-20 flex flex-col gap-2 shadow-inner">
+            <div className="flex items-center gap-1.5 text-[9px] text-[#1F2937]/70 font-sans">
+              <Truck className="h-3.5 w-3.5 text-[#DC2626] shrink-0" />
               <span>Guaranteed catch home delivery by <strong>Tomorrow 7:30 AM</strong></span>
             </div>
 
@@ -403,8 +403,8 @@ export default function ProductDetailModal({
               onClick={handleAddClick}
               className={`w-full py-3 rounded-xl cursor-pointer text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-md ${
                 isAddedFeedback
-                  ? 'bg-[#52B788] text-white shadow-emerald-50'
-                  : 'bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white shadow-orange-500/20'
+                  ? 'bg-[#DC2626] text-white shadow-[#DC2626]/10'
+                  : 'bg-gradient-to-r from-[#DC2626] to-[#B91C1C] hover:from-[#B91C1C] hover:to-[#991B1B] text-white shadow-[#DC2626]/20'
               }`}
             >
               <ShoppingCart className="h-4 w-4" />
