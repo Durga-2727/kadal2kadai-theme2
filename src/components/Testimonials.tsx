@@ -13,21 +13,21 @@ export default function Testimonials() {
   return (
     <section id="reviews" className="py-12 sm:py-16 bg-white relative overflow-hidden select-none">
       {/* Visual top border accent */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#D6D3D1] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#FDE68A] to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FAFAF9] border border-[#FAFAF9] rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#DC2626] tracking-wider font-mono">
-            <MessageSquare className="h-4 w-4 text-[#DC2626]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#FFFDF7] border border-[#FFFDF7] rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#FF7F50] tracking-wider font-mono">
+            <MessageSquare className="h-4 w-4 text-[#FF7F50]" />
             <span>100% Genuine Reviews</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#1F2937] leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-[#1B3A4B] leading-tight">
             Customer Reviews
           </h2>
-          <div className="w-12 h-1 bg-[#DC2626] mx-auto mt-4 rounded-full" />
-          <p className="text-xs sm:text-sm text-[#1F2937]/70 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
+          <div className="w-12 h-1 bg-[#FF7F50] mx-auto mt-4 rounded-full" />
+          <p className="text-xs sm:text-sm text-[#1B3A4B]/70 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
             Hear from families, home cooks, and local chefs who enjoy our dawn-sourced, chemical-free fresh catch delivered straight to their kitchen counters.
           </p>
         </div>
@@ -45,9 +45,9 @@ export default function Testimonials() {
               <div
                 key={`review-card-${item.id}-${idx}`}
                 id={`review-card-${item.id}-${idx}`}
-                className="w-[280px] sm:w-[320px] shrink-0 bg-[#FAFAF9]/60 rounded-2xl border border-[#D6D3D1]/50/90 hover:bg-white hover:border-[#D6D3D1]/50 hover:shadow-lg transition-all duration-300 p-5 flex flex-col justify-between relative"
+                className="w-[280px] sm:w-[320px] shrink-0 bg-[#FFFDF7]/60 rounded-2xl border border-[#FDE68A]/50/90 hover:bg-white hover:border-[#FDE68A]/50 hover:shadow-lg transition-all duration-300 p-5 flex flex-col justify-between relative"
               >
-                <Quote className="h-6 w-6 text-[#DC2626]/10 absolute top-4 right-4" />
+                <Quote className="h-6 w-6 text-[#FF7F50]/10 absolute top-4 right-4" />
                 
                 <div>
                   {/* Rating Stars (mix of 4 and 5) */}
@@ -57,29 +57,29 @@ export default function Testimonials() {
                         key={i}
                         className={`h-3.5 w-3.5 ${
                           i < item.rating
-                            ? 'text-[#DC2626] fill-[#DC2626]'
-                            : 'text-[#D6D3D1]'
+                            ? 'text-[#FF7F50] fill-[#FF7F50]'
+                            : 'text-[#FDE68A]'
                         }`}
                       />
                     ))}
                   </div>
 
                   {/* Customer quote */}
-                  <p className="text-xs sm:text-sm text-[#1F2937]/80 leading-relaxed font-sans font-medium italic">
+                  <p className="text-xs sm:text-sm text-[#1B3A4B]/80 leading-relaxed font-sans font-medium italic">
                     "{item.quote}"
                   </p>
                 </div>
 
                 {/* Profile detail bottom */}
-                <div className="mt-5 flex items-center gap-3 border-t border-[#D6D3D1]/50 pt-3">
+                <div className="mt-5 flex items-center gap-3 border-t border-[#FDE68A]/50 pt-3">
                   <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-white text-xs ${item.avatarColor}`}>
                     {item.name.charAt(0)}
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-[#1F2937] font-sans block">
+                    <h4 className="text-xs font-bold text-[#1B3A4B] font-sans block">
                       {item.name}
                     </h4>
-                    <span className="text-[10px] text-[#1F2937]/50 font-mono tracking-wider font-semibold block uppercase">
+                    <span className="text-[10px] text-[#1B3A4B]/50 font-mono tracking-wider font-semibold block uppercase">
                       {item.city}
                     </span>
                   </div>
@@ -92,9 +92,9 @@ export default function Testimonials() {
 
         {/* Visual Info Badge at bottom */}
         <div className="mt-8 flex justify-center">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FAFAF9] to-[#FAFAF9] border border-[#DC2626]/20 px-4 py-2 rounded-xl text-[11px] font-sans font-semibold text-[#DC2626]">
-            <span className="flex h-2 w-2 rounded-full bg-[#FAFAF9]0 animate-pulse" />
-            Average Customer Rating: <strong className="text-[#DC2626]">4.85★ / 5.0★</strong> across 2,400+ orders this month.
+          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFFDF7] to-[#FFFDF7] border border-[#FF7F50]/20 px-4 py-2 rounded-xl text-[11px] font-sans font-semibold text-[#FF7F50]">
+            <span className="flex h-2 w-2 rounded-full bg-[#FFFDF7]0 animate-pulse" />
+            Average Customer Rating: <strong className="text-[#FF7F50]">4.85★ / 5.0★</strong> across 2,400+ orders this month.
           </div>
         </div>
 

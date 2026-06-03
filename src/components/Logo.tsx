@@ -12,7 +12,7 @@ interface LogoProps {
 
 export default function Logo({ className = "h-12 w-12" }: LogoProps) {
   return (
-    <div className={`${className} bg-white rounded-full p-2 flex items-center justify-center border border-[#D6D3D1]/50 shadow-sm shrink-0 overflow-hidden`}>
+    <div className={`${className} bg-white rounded-full p-2 flex items-center justify-center border border-[#FDE68A]/50 shadow-sm shrink-0 overflow-hidden`}>
       <img
         src="/logo.png"
         alt="Kadal 2 Kadaai Logo"

@@ -66,7 +66,7 @@ export default function Navigation({
       <header
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           isNavbarWhite
-            ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#D6D3D1]/50 py-2'
+            ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#FDE68A]/50 py-2'
             : 'bg-transparent py-3.5'
         }`}
       >
@@ -84,12 +84,12 @@ export default function Navigation({
             <Logo className={`${isNavbarWhite ? 'h-16 w-16' : 'h-20 w-20 sm:h-24 sm:w-24'} shrink-0`} />
             <div className="flex flex-col justify-center font-sans">
               <span className={`font-serif text-lg sm:text-xl lg:text-2xl font-extrabold tracking-tight block uppercase ${
-                isNavbarWhite ? 'text-[#1F2937]' : 'text-white'
+                isNavbarWhite ? 'text-[#1B3A4B]' : 'text-white'
               }`}>
                 Kadal <span className="lining-nums">2</span> Kadaai
               </span>
               <span className={`text-[8px] sm:text-[9px] tracking-widest uppercase block font-bold ${
-                isNavbarWhite ? 'text-[#1F2937]/80' : 'text-[#D6D3D1]'
+                isNavbarWhite ? 'text-[#1B3A4B]/80' : 'text-[#FDE68A]'
               }`}>
                 Sea to Kitchen
               </span>
@@ -108,15 +108,15 @@ export default function Navigation({
                 }}
                 className={`relative px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer flex items-center gap-1.5 ${
                   currentPage === 'home'
-                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#1F2937] font-bold'
-                    : isNavbarWhite ? 'text-[#1F2937]/70 hover:text-[#DC2626]' : 'text-[#FAFAF9] hover:text-white'
+                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#1B3A4B] font-bold'
+                    : isNavbarWhite ? 'text-[#1B3A4B]/70 hover:text-[#14B8A6]' : 'text-[#FFFDF7] hover:text-white'
                 }`}
               >
                 {currentPage === 'home' && (
                   <motion.div
                     layoutId="desktopPageBG"
                     className={`absolute inset-0 rounded-lg -z-10 ${
-                      isNavbarWhite ? 'bg-[#DC2626]' : 'bg-white shadow-md'
+                      isNavbarWhite ? 'bg-[#FF7F50]' : 'bg-white shadow-md'
                     }`}
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
@@ -132,15 +132,15 @@ export default function Navigation({
                 }}
                 className={`relative px-4 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer flex items-center gap-1.5 ${
                   currentPage === 'market'
-                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#1F2937] font-bold'
-                    : isNavbarWhite ? 'text-[#1F2937]/70 hover:text-[#DC2626]' : 'text-[#FAFAF9] hover:text-white'
+                    ? isNavbarWhite ? 'text-white font-bold' : 'text-[#1B3A4B] font-bold'
+                    : isNavbarWhite ? 'text-[#1B3A4B]/70 hover:text-[#14B8A6]' : 'text-[#FFFDF7] hover:text-white'
                 }`}
               >
                 {currentPage === 'market' && (
                   <motion.div
                     layoutId="desktopPageBG"
                     className={`absolute inset-0 rounded-lg -z-10 ${
-                      isNavbarWhite ? 'bg-[#DC2626]' : 'bg-white shadow-md'
+                      isNavbarWhite ? 'bg-[#FF7F50]' : 'bg-white shadow-md'
                     }`}
                     transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                   />
@@ -168,8 +168,8 @@ export default function Navigation({
                       setSearchTerm(e.target.value);
                       onSearch(e.target.value);
                     }}
-                    className={`h-9 px-3 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#DC2626] mr-2 ${
-                      isNavbarWhite ? 'bg-[#FAFAF9] border-[#D6D3D1] text-[#1F2937]' : 'bg-white/15 border-white/20 text-white placeholder-[#D6D3D1]'
+                    className={`h-9 px-3 text-xs rounded-lg border focus:outline-none focus:ring-1 focus:ring-[#14B8A6] mr-2 ${
+                      isNavbarWhite ? 'bg-[#FFFDF7] border-[#FDE68A] text-[#1B3A4B]' : 'bg-white/15 border-white/20 text-white placeholder-[#FDE68A]'
                     }`}
                   />
                 )}
@@ -185,7 +185,7 @@ export default function Navigation({
                   setIsSearchExpanded(!isSearchExpanded);
                 }}
                 className={`p-2 rounded-lg transition-colors cursor-pointer ${
-                  isNavbarWhite ? 'text-[#1F2937]/70 hover:bg-[#FAFAF9]' : 'text-white hover:bg-white/10'
+                  isNavbarWhite ? 'text-[#1B3A4B]/70 hover:bg-[#FFFDF7]' : 'text-white hover:bg-white/10'
                 }`}
               >
                 <Search className="h-5 w-5" style={{ color: isNavbarWhite ? '#050505' : undefined }} />
@@ -197,12 +197,12 @@ export default function Navigation({
               id="wishlist-trigger-btn"
               onClick={onOpenWishlist}
               className={`p-2 rounded-lg relative transition-colors cursor-pointer ${
-                isNavbarWhite ? 'text-[#1F2937]/70 hover:bg-[#FAFAF9]' : 'text-white hover:bg-white/10'
+                isNavbarWhite ? 'text-[#1B3A4B]/70 hover:bg-[#FFFDF7]' : 'text-white hover:bg-white/10'
               }`}
             >
-              <Heart className={`h-5 w-5 ${wishlist.length > 0 ? 'fill-[#DC2626] text-[#DC2626]' : ''}`} style={{ color: isNavbarWhite ? '#080707' : undefined }} />
+              <Heart className={`h-5 w-5 ${wishlist.length > 0 ? 'fill-[#FF7F50] text-[#FF7F50]' : ''}`} style={{ color: isNavbarWhite ? '#080707' : undefined }} />
               {wishlist.length > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-[#FAFAF9]0 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-0.5 -right-0.5 bg-[#FFFDF7]0 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                   {wishlist.length}
                 </span>
               )}
@@ -213,12 +213,12 @@ export default function Navigation({
               id="cart-trigger-btn"
               onClick={onOpenCart}
               className={`p-2 rounded-lg relative transition-colors cursor-pointer ${
-                isNavbarWhite ? 'text-[#1F2937]/70 hover:bg-[#FAFAF9]' : 'text-white hover:bg-white/10'
+                isNavbarWhite ? 'text-[#1B3A4B]/70 hover:bg-[#FFFDF7]' : 'text-white hover:bg-white/10'
               }`}
             >
               <ShoppingBag className="h-5 w-5" style={{ color: isNavbarWhite ? '#030303' : undefined }} />
               {totalCartItems > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-[#DC2626] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                <span className="absolute -top-0.5 -right-0.5 bg-[#FF7F50] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                   {totalCartItems}
                 </span>
               )}
@@ -230,7 +230,7 @@ export default function Navigation({
               onClick={() => setIsLoginModalOpen(true)}
               className={`hidden sm:flex p-2 rounded-lg items-center gap-1.5 transition-colors cursor-pointer text-xs font-semibold ${
                 isNavbarWhite
-                  ? 'text-[#1F2937]/80 hover:bg-[#FAFAF9] border border-[#D6D3D1] shadow-sm px-3 h-9'
+                  ? 'text-[#1B3A4B]/80 hover:bg-[#FFFDF7] border border-[#FDE68A] shadow-sm px-3 h-9'
                   : 'text-white hover:bg-white/10 border border-white/20 px-3 h-9 bg-white/5'
               }`}
               style={{ color: isNavbarWhite ? '#100f0f' : undefined }}
@@ -244,7 +244,7 @@ export default function Navigation({
               id="mobile-menu-toggle"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 rounded-lg lg:hidden transition-colors cursor-pointer ${
-                isNavbarWhite ? 'text-[#1F2937]/70 hover:bg-[#FAFAF9]' : 'text-white hover:bg-white/10'
+                isNavbarWhite ? 'text-[#1B3A4B]/70 hover:bg-[#FFFDF7]' : 'text-white hover:bg-white/10'
               }`}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -269,17 +269,17 @@ export default function Navigation({
               exit={{ x: '-100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               onClick={(e) => e.stopPropagation()}
-              className="w-4/5 max-w-sm h-full bg-[#1F2937] text-white flex flex-col justify-between p-6 shadow-2xl relative"
+              className="w-4/5 max-w-sm h-full bg-[#1B3A4B] text-white flex flex-col justify-between p-6 shadow-2xl relative"
             >
               <div>
-                <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#1F2937]/40">
+                <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#1B3A4B]/40">
                   <div className="flex items-center">
                     <Logo className="h-28 w-28 shrink-0 mx-auto" />
                   </div>
                   <button
                     id="mobile-drawer-close"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="p-1.5 rounded-lg bg-[#1F2937]/30 text-[#D6D3D1] hover:text-white"
+                    className="p-1.5 rounded-lg bg-[#1B3A4B]/30 text-[#FDE68A] hover:text-white"
                   >
                     <X className="h-5 w-5" />
                   </button>
@@ -295,8 +295,8 @@ export default function Navigation({
                         onNavigate('home');
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full text-left text-base font-bold pb-2 border-b border-[#1F2937]/40 flex items-center justify-between ${
-                        currentPage === 'home' ? 'text-[#DC2626]' : 'text-[#D6D3D1]'
+                      className={`w-full text-left text-base font-bold pb-2 border-b border-[#1B3A4B]/40 flex items-center justify-between ${
+                        currentPage === 'home' ? 'text-[#FF7F50]' : 'text-[#FDE68A]'
                       }`}
                     >
                       <span className="font-serif">⚓ Home Page</span>
@@ -312,8 +312,8 @@ export default function Navigation({
                         onNavigate('marketplace-hub');
                         setIsMobileMenuOpen(false);
                       }}
-                      className={`w-full text-left text-base font-bold pb-2 border-b border-[#1F2937]/40 flex items-center justify-between ${
-                        currentPage === 'market' ? 'text-[#DC2626]' : 'text-[#D6D3D1]'
+                      className={`w-full text-left text-base font-bold pb-2 border-b border-[#1B3A4B]/40 flex items-center justify-between ${
+                        currentPage === 'market' ? 'text-[#FF7F50]' : 'text-[#FDE68A]'
                       }`}
                     >
                       <span className="font-serif">🛒 Marketplace</span>
@@ -324,19 +324,19 @@ export default function Navigation({
                 </nav>
               </div>
 
-              <div className="pb-8 pt-4 border-t border-[#1F2937]/40 flex flex-col gap-3">
+              <div className="pb-8 pt-4 border-t border-[#1B3A4B]/40 flex flex-col gap-3">
                 <button
                   id="mobile-auth-btn"
                   onClick={() => {
                     setIsMobileMenuOpen(false);
                     setIsLoginModalOpen(true);
                   }}
-                  className="w-full flex items-center justify-center gap-2 bg-[#DC2626] hover:bg-[#B91C1C] text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-[#1F2937]/40 transition-colors text-sm"
+                  className="w-full flex items-center justify-center gap-2 bg-[#FF7F50] hover:bg-[#E96D3E] text-white font-semibold py-3 px-4 rounded-xl shadow-lg shadow-[#1B3A4B]/40 transition-colors text-sm"
                 >
                   <User className="h-4 w-4" />
                   <span>{isLoggedIn ? 'Access Account' : 'Sign In Now'}</span>
                 </button>
-                <p className="text-center text-[10px] text-[#D6D3D1]/60 font-sans">
+                <p className="text-center text-[10px] text-[#FDE68A]/60 font-sans">
                   Direct Daily Catch Premium Logistics
                 </p>
               </div>
@@ -358,9 +358,9 @@ export default function Navigation({
               initial={{ scale: 0.95, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 20 }}
-              className="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-2xl relative border border-[#D6D3D1]/50"
+              className="bg-white rounded-3xl w-full max-w-md overflow-hidden shadow-2xl relative border border-[#FDE68A]/50"
             >
-              <div className="bg-[#1F2937] p-6 text-white flex flex-col items-center relative">
+              <div className="bg-[#1B3A4B] p-6 text-white flex flex-col items-center relative">
                 <button
                   id="login-close-btn"
                   onClick={() => setIsLoginModalOpen(false)}
@@ -370,18 +370,18 @@ export default function Navigation({
                 </button>
                 <Logo className="h-20 w-20 mb-3 shadow-lg" />
                 <h3 className="font-serif text-2xl font-bold tracking-tight text-center">Join Kadal <span className="lining-nums">2</span> Kadaai</h3>
-                <p className="text-xs text-[#D6D3D1] mt-1 text-center font-sans">Authentic coastal fresh seafood straight to your home</p>
+                <p className="text-xs text-[#FDE68A] mt-1 text-center font-sans">Authentic coastal fresh seafood straight to your home</p>
               </div>
 
               <div className="p-6 sm:p-8">
                 {isLoggedIn ? (
                   <div className="text-center py-4">
-                    <div className="w-16 h-16 bg-[#FAFAF9] text-[#DC2626] rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
+                    <div className="w-16 h-16 bg-[#FFFDF7] text-[#FF7F50] rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
                       {userEmail ? userEmail.charAt(0).toUpperCase() : 'U'}
                     </div>
-                    <h4 className="text-[#1F2937] font-semibold mb-1">Welcome Back!</h4>
-                    <p className="text-xs text-[#1F2937] font-medium break-all mb-6">{userEmail || 'thiruvikram8925@gmail.com'}</p>
-                    <div className="p-3 bg-[#FAFAF9] border border-[#FAFAF9] rounded-xl mb-6 text-xs text-[#1F2937]/80 font-sans">
+                    <h4 className="text-[#1B3A4B] font-semibold mb-1">Welcome Back!</h4>
+                    <p className="text-xs text-[#1B3A4B] font-medium break-all mb-6">{userEmail || 'thiruvikram8925@gmail.com'}</p>
+                    <div className="p-3 bg-[#FFFDF7] border border-[#FFFDF7] rounded-xl mb-6 text-xs text-[#1B3A4B]/80 font-sans">
                       Delivery Pin: <strong>600001 (Chennai Central)</strong> - Express same-morning routing active.
                     </div>
                     <button
@@ -390,7 +390,7 @@ export default function Navigation({
                         setIsLoggedIn(false);
                         setUserEmail('');
                       }}
-                      className="w-full bg-[#FAFAF9] hover:bg-[#D6D3D1] text-[#1F2937]/80 font-semibold text-xs py-2.5 rounded-xl transition-colors cursor-pointer"
+                      className="w-full bg-[#FFFDF7] hover:bg-[#FDE68A] text-[#1B3A4B]/80 font-semibold text-xs py-2.5 rounded-xl transition-colors cursor-pointer"
                     >
                       Sign Out
                     </button>
@@ -405,26 +405,26 @@ export default function Navigation({
                     className="space-y-4"
                   >
                     <div>
-                      <label className="block text-xs font-semibold text-[#1F2937]/80 mb-1">Email Address</label>
+                      <label className="block text-xs font-semibold text-[#1B3A4B]/80 mb-1">Email Address</label>
                       <input
                         type="email"
                         required
                         placeholder="yourname@gmail.com"
                         value={userEmail}
                         onChange={(e) => setUserEmail(e.target.value)}
-                        className="w-full px-3.5 py-2.5 border border-[#D6D3D1] rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-[#DC2626] focus:border-[#DC2626] bg-[#FAFAF9]/50"
+                        className="w-full px-3.5 py-2.5 border border-[#FDE68A] rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-[#FF7F50] focus:border-[#FF7F50] bg-[#FFFDF7]/50"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-[#1F2937]/80 mb-1">Mobile Number (For fresh delivery updates)</label>
+                      <label className="block text-xs font-semibold text-[#1B3A4B]/80 mb-1">Mobile Number (For fresh delivery updates)</label>
                       <div className="flex gap-2">
-                        <span className="inline-flex items-center px-3 border border-[#D6D3D1] rounded-xl bg-[#FAFAF9] text-sm text-[#1F2937]/70 font-mono">+91</span>
+                        <span className="inline-flex items-center px-3 border border-[#FDE68A] rounded-xl bg-[#FFFDF7] text-sm text-[#1B3A4B]/70 font-mono">+91</span>
                         <input
                           type="tel"
                           required
                           pattern="[0-9]{10}"
                           placeholder="9876543210"
-                          className="flex-1 px-3.5 py-2.5 border border-[#D6D3D1] rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-[#DC2626] focus:border-[#DC2626] bg-[#FAFAF9]/50"
+                          className="flex-1 px-3.5 py-2.5 border border-[#FDE68A] rounded-xl text-sm focus:outline-none focus:ring-1 focus:ring-[#FF7F50] focus:border-[#FF7F50] bg-[#FFFDF7]/50"
                         />
                       </div>
                     </div>
@@ -433,13 +433,13 @@ export default function Navigation({
                       <button
                         id="submit-login-btn"
                         type="submit"
-                        className="w-full bg-[#DC2626] hover:bg-[#B91C1C] text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-lg shadow-[#FAFAF9] cursor-pointer"
+                        className="w-full bg-[#FF7F50] hover:bg-[#E96D3E] text-white font-bold text-sm py-3 rounded-xl transition-colors shadow-lg shadow-[#FFFDF7] cursor-pointer"
                       >
                         Verify & Login with OTP
                       </button>
                     </div>
 
-                    <p className="text-[11px] text-[#1F2937]/70 text-center leading-relaxed font-sans">
+                    <p className="text-[11px] text-[#1B3A4B]/70 text-center leading-relaxed font-sans">
                       By proceeding, you authorize daily morning catch notifications via SMS / WhatsApp. No spam guaranteed!
                     </p>
                   </form>

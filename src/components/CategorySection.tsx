@@ -13,19 +13,19 @@ interface CategorySectionProps {
 
 export default function CategorySection({ onSelectCategory }: CategorySectionProps) {
   return (
-    <section id="categories" className="py-20 bg-[#FAFAF9] relative overflow-hidden select-none">
+    <section id="categories" className="py-20 bg-[#FFFDF7] relative overflow-hidden select-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-[#DC2626] text-xs font-bold font-mono tracking-widest uppercase block mb-2">
+          <span className="text-[#FF7F50] text-xs font-bold font-mono tracking-widest uppercase block mb-2">
             Pristine Ocean Sourcing
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1F2937] leading-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#1B3A4B] leading-tight">
             Shop by Category
           </h2>
-          <div className="w-12 h-1 bg-[#DC2626] mx-auto mt-4 rounded-full" />
-          <p className="text-sm text-[#1F2937]/70 mt-4 leading-relaxed font-sans">
+          <div className="w-12 h-1 bg-[#FF7F50] mx-auto mt-4 rounded-full" />
+          <p className="text-sm text-[#1B3A4B]/70 mt-4 leading-relaxed font-sans">
             Every catch is prepared by certified experts to match your customized kitchen preferences. Choose from our premium coastal selections.
           </p>
         </div>
@@ -43,10 +43,10 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="group aspect-[4/3] rounded-2xl overflow-hidden relative shadow-md hover:shadow-xl transition-all duration-300 text-left cursor-pointer border border-[#D6D3D1]/50"
+                className="group aspect-[4/3] rounded-2xl overflow-hidden relative shadow-md hover:shadow-xl transition-all duration-300 text-left cursor-pointer border border-[#FDE68A]/50"
               >
                 {/* Full bleed photograph background */}
-                <div className="absolute inset-0 z-0 bg-[#D6D3D1]">
+                <div className="absolute inset-0 z-0 bg-[#FDE68A]">
                   <img
                     src={cat.image}
                     alt={cat.name}
@@ -55,7 +55,7 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                   />
                   
                   {/* Gradient overlay: transparent top to dark navy bottom */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1F2937]/90 via-[#1F2937]/45 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-85" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1B3A4B]/90 via-[#1B3A4B]/45 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-85" />
                 </div>
 
                 {/* Category labels and links */}
@@ -63,7 +63,7 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                   <div className="flex items-center justify-between">
                     <div>
                       {/* Tamil Name Indicator */}
-                      <span className="block text-[11px] font-medium tracking-wider text-[#DC2626] mb-0.5">
+                      <span className="block text-[11px] font-medium tracking-wider text-[#FF7F50] mb-0.5">
                         {cat.tamilName ? `${cat.tamilName} · ` : ''}{count} Items Available
                       </span>
                       <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-wide">
@@ -71,7 +71,7 @@ export default function CategorySection({ onSelectCategory }: CategorySectionPro
                       </h3>
                     </div>
                     
-                    <div className="bg-[#DC2626] hover:bg-[#DC2626] text-white rounded-xl p-2.5 transform translate-x-2 opacity-80 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-md">
+                    <div className="bg-[#FF7F50] hover:bg-[#FF7F50] text-white rounded-xl p-2.5 transform translate-x-2 opacity-80 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 shadow-md">
                       <ArrowRight className="h-4.5 w-4.5" />
                     </div>
                   </div>
