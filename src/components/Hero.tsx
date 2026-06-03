@@ -157,7 +157,10 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
                 className="flex items-center gap-3 justify-start"
               >
                 <div className="p-2 bg-[#14B8A6]/10 rounded-xl text-[#14B8A6] shrink-0 border border-[#14B8A6]/20">
-                  <Users className="h-5 w-5 text-[#FDE68A]" /> mb-0 leading-none">
+                  <Users className="h-5 w-5 text-[#FDE68A]" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#14B8A6] mb-0 leading-none">
                     <AnimatedCounter target={10000} suffix="+" />
                   </p>
                   <p className="text-[10px] sm:text-xs text-[#FFFDF7]/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
@@ -172,7 +175,10 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
                 className="flex items-center gap-3 justify-start"
               >
                 <div className="p-2 bg-[#14B8A6]/10 rounded-xl text-[#14B8A6] shrink-0 border border-[#14B8A6]/20">
-                  <Ship className="h-5 w-5 text-[#FDE68A]" /> mb-0 leading-none">
+                  <Ship className="h-5 w-5 text-[#FDE68A]" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#14B8A6] mb-0 leading-none">
                     <AnimatedCounter target={500} suffix="+" />
                   </p>
                   <p className="text-[10px] sm:text-xs text-[#FFFDF7]/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
@@ -187,7 +193,10 @@ export default function Hero({ onShopClick, onExploreClick }: HeroProps) {
                 className="flex items-center gap-3 justify-start"
               >
                 <div className="p-2 bg-[#14B8A6]/10 rounded-xl text-[#14B8A6] shrink-0 border border-[#14B8A6]/20">
-                  <ShieldAlert className="h-5 w-5 text-[#FDE68A]" /> mb-0 leading-none">
+                  <ShieldAlert className="h-5 w-5 text-[#FDE68A]" />
+                </div>
+                <div className="text-left">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-[#14B8A6] mb-0 leading-none">
                     <AnimatedCounter target={100} suffix="%" />
                   </p>
                   <p className="text-[10px] sm:text-xs text-[#FFFDF7]/70 uppercase tracking-wider font-semibold font-sans mt-0.5 leading-none">
