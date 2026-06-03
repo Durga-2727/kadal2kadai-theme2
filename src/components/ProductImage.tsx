@@ -105,20 +105,20 @@ export function ProductImage({
 
   if (hasError && !isCustom) {
     return (
-      <div className="group/img relative w-full h-full flex flex-col items-center justify-center p-4 bg-[#FFFDF7] text-[#1B3A4B]/70 rounded-2xl border-2 border-dashed border-[#FDE68A] select-none text-center">
-        <UploadCloud className="w-8 h-8 text-[#FF7F50] mb-2 animate-bounce" />
-        <span className="text-[11px] font-bold text-[#1B3A4B]/80 block line-clamp-1 font-mono">
+      <div className="group/img relative w-full h-full flex flex-col items-center justify-center p-4 bg-[#F7FEE7] text-[#064E3B]/70 rounded-2xl border-2 border-dashed border-[#ECFCCB] select-none text-center">
+        <UploadCloud className="w-8 h-8 text-[#10B981] mb-2 animate-bounce" />
+        <span className="text-[11px] font-bold text-[#064E3B]/80 block line-clamp-1 font-mono">
           {filename}
         </span>
         <button
           onClick={triggerUpload}
-          className="mt-2 text-[10px] bg-[#FF7F50] hover:bg-[#1B3A4B] text-white font-medium py-1 px-2.5 rounded-full shadow-sm flex items-center gap-1 transition-colors"
+          className="mt-2 text-[10px] bg-[#10B981] hover:bg-[#064E3B] text-white font-medium py-1 px-2.5 rounded-full shadow-sm flex items-center gap-1 transition-colors"
         >
           <Camera className="w-3 h-3" />
           Click to Upload Image
         </button>
-        <span className="text-[9px] text-[#1B3A4B]/50 mt-2 block">
-          Or place your image in <code className="bg-[#FFFDF7] px-1 py-0.5 rounded text-[#FF7F50] font-semibold font-mono">public/</code>
+        <span className="text-[9px] text-[#064E3B]/50 mt-2 block">
+          Or place your image in <code className="bg-[#F7FEE7] px-1 py-0.5 rounded text-[#10B981] font-semibold font-mono">public/</code>
         </span>
         <input
           type="file"
@@ -132,10 +132,10 @@ export function ProductImage({
   }
 
   return (
-    <div className="group/img relative w-full h-full bg-[#FFFDF7] rounded-2xl overflow-hidden flex items-center justify-center">
+    <div className="group/img relative w-full h-full bg-[#F7FEE7] rounded-2xl overflow-hidden flex items-center justify-center">
       {!isLoaded && (
-        <div className="absolute inset-0 bg-[#FFFDF7] animate-pulse flex items-center justify-center">
-          <ImageIcon className="w-6 h-6 text-[#FDE68A] animate-spin" />
+        <div className="absolute inset-0 bg-[#F7FEE7] animate-pulse flex items-center justify-center">
+          <ImageIcon className="w-6 h-6 text-[#ECFCCB] animate-spin" />
         </div>
       )}
       <img
@@ -204,9 +204,9 @@ export function ProductImage({
           <button
             onClick={triggerUpload}
             title="Upload Custom Image"
-            className="p-2 bg-white/90 hover:bg-white text-[#1B3A4B] rounded-full shadow transition-all hover:scale-110 flex items-center gap-1.5 text-xs font-semibold px-3"
+            className="p-2 bg-white/90 hover:bg-white text-[#064E3B] rounded-full shadow transition-all hover:scale-110 flex items-center gap-1.5 text-xs font-semibold px-3"
           >
-            <Camera className="w-3.5 h-3.5 text-[#FF7F50]" />
+            <Camera className="w-3.5 h-3.5 text-[#10B981]" />
             <span>Upload Image</span>
           </button>
           
@@ -214,7 +214,7 @@ export function ProductImage({
             <button
               onClick={handleRemoveCustomImage}
               title="Revert to Default"
-              className="p-2 bg-[#FF7F50]/90 hover:bg-[#FF7F50] text-white rounded-full shadow transition-all hover:scale-110"
+              className="p-2 bg-[#10B981]/90 hover:bg-[#10B981] text-white rounded-full shadow transition-all hover:scale-110"
             >
               <Trash2 className="w-3.5 h-3.5" />
             </button>

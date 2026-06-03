@@ -97,34 +97,34 @@ export default function ProductDetailModal({
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -400, opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-[#FDE68A]/50 flex flex-col relative max-h-[85vh]"
+          className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-[#ECFCCB]/50 flex flex-col relative max-h-[85vh]"
           onClick={(e) => e.stopPropagation()}
         >
           
           {/* Sticky Header block */}
-          <div className="flex justify-between items-center px-5 pt-5 pb-3 border-b border-[#FDE68A]/50 bg-white z-20">
+          <div className="flex justify-between items-center px-5 pt-5 pb-3 border-b border-[#ECFCCB]/50 bg-white z-20">
             <div className="pr-8">
-              <span className="bg-[#FFFDF7] border border-[#FF7F50]/20 text-[#1B3A4B] px-2 py-0.5 rounded-lg text-[9px] font-bold tracking-wider uppercase font-mono block w-fit mb-1">
+              <span className="bg-[#F7FEE7] border border-[#10B981]/20 text-[#064E3B] px-2 py-0.5 rounded-lg text-[9px] font-bold tracking-wider uppercase font-mono block w-fit mb-1">
                 CHEMICAL-FREE
               </span>
-              <h2 className="font-serif text-lg sm:text-xl font-bold text-[#1B3A4B] tracking-tight leading-tight">
+              <h2 className="font-serif text-lg sm:text-xl font-bold text-[#064E3B] tracking-tight leading-tight">
                 {product.name}
               </h2>
-              <span className="text-[10px] text-[#FF7F50] font-bold block mt-0.5 tracking-widest uppercase font-mono">{product.localName}</span>
+              <span className="text-[10px] text-[#10B981] font-bold block mt-0.5 tracking-widest uppercase font-mono">{product.localName}</span>
             </div>
             <div className="flex items-center gap-1.5 shrink-0">
               <button
                 id="detail-wishlist-toggle"
                 onClick={() => onToggleWishlist(product.id)}
-                className="p-2 bg-[#FFFDF7] hover:bg-[#FFFDF7] border border-[#FDE68A] text-[#1B3A4B]/80 hover:text-[#FF7F50] rounded-xl transition-all cursor-pointer shadow-xs"
+                className="p-2 bg-[#F7FEE7] hover:bg-[#F7FEE7] border border-[#ECFCCB] text-[#064E3B]/80 hover:text-[#10B981] rounded-xl transition-all cursor-pointer shadow-xs"
                 title="Add to Wishlist"
               >
-                <Heart className={`h-4 w-4 ${isWishlisted ? 'fill-[#FF7F50] text-[#FF7F50]' : ''}`} />
+                <Heart className={`h-4 w-4 ${isWishlisted ? 'fill-[#10B981] text-[#10B981]' : ''}`} />
               </button>
               <button
                 id="detail-close-btn"
                 onClick={onClose}
-                className="p-2 bg-[#FFFDF7] hover:bg-[#FFFDF7] border border-[#FDE68A] text-[#1B3A4B] hover:text-[#FF7F50] rounded-xl transition-all cursor-pointer shadow-xs"
+                className="p-2 bg-[#F7FEE7] hover:bg-[#F7FEE7] border border-[#ECFCCB] text-[#064E3B] hover:text-[#10B981] rounded-xl transition-all cursor-pointer shadow-xs"
                 title="Close details"
               >
                 <X className="h-4 w-4" />
@@ -138,22 +138,22 @@ export default function ProductDetailModal({
             {/* Primary Hero Image & Gallery */}
             <div className="space-y-3">
               <div
-                className="relative aspect-video rounded-2xl overflow-hidden w-full bg-[#FFFDF7] border border-[#FDE68A]/50 shadow-inner group/zoom select-none cursor-zoom-in"
+                className="relative aspect-video rounded-2xl overflow-hidden w-full bg-[#F7FEE7] border border-[#ECFCCB]/50 shadow-inner group/zoom select-none cursor-zoom-in"
                 onClick={() => setIsZoomed(true)}
               >
                 <ProductImage
                   productId={product.id}
                   src={product.images[activeImageIndex] || product.images[0]}
                   alt={product.name}
-                  className="w-full h-full object-contain p-3 bg-[#FFFDF7]"
+                  className="w-full h-full object-contain p-3 bg-[#F7FEE7]"
                 />
 
                 {/* Sourcing badges on image */}
                 <div className="absolute bottom-3 left-3 flex gap-1.5">
-                  <span className="bg-[#FF7F50]/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg shadow-xs">
+                  <span className="bg-[#10B981]/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg shadow-xs">
                     {product.catchLocation}
                   </span>
-                  <span className="bg-[#FFFDF7]0/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg flex items-center gap-0.5 shadow-xs">
+                  <span className="bg-[#F7FEE7]0/90 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider px-2 py-1 rounded-lg flex items-center gap-0.5 shadow-xs">
                     <ShieldCheck className="h-3 w-3" />
                     <span>Dawn Sourced</span>
                   </span>
@@ -173,7 +173,7 @@ export default function ProductDetailModal({
                       key={idx}
                       id={`thumbnail-selector-${idx}`}
                       className={`w-14 h-11 rounded-lg overflow-hidden border-2 transition-all shrink-0 cursor-pointer ${
-                        activeImageIndex === idx ? 'border-[#FF7F50] scale-102 shadow-xs' : 'border-[#FDE68A] opacity-70 hover:opacity-100'
+                        activeImageIndex === idx ? 'border-[#10B981] scale-102 shadow-xs' : 'border-[#ECFCCB] opacity-70 hover:opacity-100'
                       }`}
                       onClick={() => setActiveImageIndex(idx)}
                     >
@@ -181,7 +181,7 @@ export default function ProductDetailModal({
                         productId={product.id}
                         src={imgUrl}
                         alt={`${product.name} thumbnail`}
-                        className="w-full h-full object-contain p-0.5 bg-[#FFFDF7]"
+                        className="w-full h-full object-contain p-0.5 bg-[#F7FEE7]"
                         showUploadButton={false}
                       />
                     </button>
@@ -191,41 +191,41 @@ export default function ProductDetailModal({
             </div>
 
             {/* Sourcing Logistics estimates */}
-            <div className="bg-[#FFFDF7] border border-[#FDE68A]/50 p-3 rounded-xl grid grid-cols-2 gap-3 text-[10px] font-mono">
+            <div className="bg-[#F7FEE7] border border-[#ECFCCB]/50 p-3 rounded-xl grid grid-cols-2 gap-3 text-[10px] font-mono">
               <div className="flex items-center gap-1.5">
-                <Calendar className="h-3.5 w-3.5 text-[#FF7F50] shrink-0" />
+                <Calendar className="h-3.5 w-3.5 text-[#10B981] shrink-0" />
                 <div>
-                  <span className="text-[#1B3A4B]/50 block text-[8px] uppercase">Catch Timeline:</span>
-                  <strong className="text-[#1B3A4B]">{product.catchDate}</strong>
+                  <span className="text-[#064E3B]/50 block text-[8px] uppercase">Catch Timeline:</span>
+                  <strong className="text-[#064E3B]">{product.catchDate}</strong>
                 </div>
               </div>
               <div className="flex items-center gap-1.5">
-                <MapPin className="h-3.5 w-3.5 text-[#FF7F50] shrink-0" />
+                <MapPin className="h-3.5 w-3.5 text-[#10B981] shrink-0" />
                 <div>
-                  <span className="text-[#1B3A4B]/50 block text-[8px] uppercase">Catch Location:</span>
-                  <strong className="text-[#1B3A4B] truncate block max-w-[100px]">{product.catchLocation}</strong>
+                  <span className="text-[#064E3B]/50 block text-[8px] uppercase">Catch Location:</span>
+                  <strong className="text-[#064E3B] truncate block max-w-[100px]">{product.catchLocation}</strong>
                 </div>
               </div>
             </div>
 
             {/* Sourcing pricing box */}
-            <div className="p-3 bg-[#FFFDF7]/40 border border-[#FFFDF7]/50 rounded-xl flex items-center justify-between">
+            <div className="p-3 bg-[#F7FEE7]/40 border border-[#F7FEE7]/50 rounded-xl flex items-center justify-between">
               <div>
-                <span className="text-[8px] text-[#1B3A4B]/50 uppercase font-mono tracking-wider">Sourcing Price:</span>
+                <span className="text-[8px] text-[#064E3B]/50 uppercase font-mono tracking-wider">Sourcing Price:</span>
                 <div className="flex items-baseline gap-1 mt-0.5">
-                  <span className="text-xs font-bold text-[#1B3A4B]">₹</span>
-                  <span className="text-xl font-bold text-[#1B3A4B]">{currentPrice}</span>
-                  <span className="text-[10px] text-[#1B3A4B]/50 font-sans">/{selectedWeight} Box</span>
+                  <span className="text-xs font-bold text-[#064E3B]">₹</span>
+                  <span className="text-xl font-bold text-[#064E3B]">{currentPrice}</span>
+                  <span className="text-[10px] text-[#064E3B]/50 font-sans">/{selectedWeight} Box</span>
                 </div>
               </div>
-              <span className="px-2 py-0.5 text-[8px] bg-[#FF7F50]/10 text-[#1B3A4B] font-bold uppercase rounded-lg font-mono">
+              <span className="px-2 py-0.5 text-[8px] bg-[#10B981]/10 text-[#064E3B] font-bold uppercase rounded-lg font-mono">
                 Price Locked
               </span>
             </div>
 
             {/* Weight Options Selection pills */}
             <div className="space-y-1.5">
-              <span className="font-bold text-[#1B3A4B]/80 uppercase font-mono text-[9px] block">Select Weight:</span>
+              <span className="font-bold text-[#064E3B]/80 uppercase font-mono text-[9px] block">Select Weight:</span>
               <div className="flex flex-wrap gap-1.5">
                 {product.availableWeights.map((w) => {
                   const isSelect = selectedWeight === w;
@@ -236,8 +236,8 @@ export default function ProductDetailModal({
                       onClick={() => setSelectedWeight(w)}
                       className={`px-3 py-1.5 text-[10px] font-bold rounded-lg border transition-all cursor-pointer ${
                         isSelect
-                          ? 'bg-[#FF7F50] border-[#FF7F50] text-white shadow-xs'
-                          : 'bg-[#FFFDF7] border-[#FDE68A] text-[#1B3A4B]/70 hover:bg-[#FFFDF7]'
+                          ? 'bg-[#10B981] border-[#10B981] text-white shadow-xs'
+                          : 'bg-[#F7FEE7] border-[#ECFCCB] text-[#064E3B]/70 hover:bg-[#F7FEE7]'
                       }`}
                     >
                       {w}
@@ -250,7 +250,7 @@ export default function ProductDetailModal({
             {/* Prepare Cuts Options selector */}
             {product.processingOptions.length > 0 && (
               <div className="space-y-1.5">
-                <span className="font-bold text-[#1B3A4B]/80 uppercase font-mono text-[9px] block">Prepare Cuts:</span>
+                <span className="font-bold text-[#064E3B]/80 uppercase font-mono text-[9px] block">Prepare Cuts:</span>
                 <div className="flex flex-wrap gap-1.5">
                   {product.processingOptions.map((o) => {
                     const isSelect = selectedProcessing === o;
@@ -261,8 +261,8 @@ export default function ProductDetailModal({
                         onClick={() => setSelectedProcessing(o)}
                         className={`px-2.5 py-1.5 text-[10px] font-bold rounded-lg border transition-all cursor-pointer ${
                           isSelect
-                            ? 'bg-[#1B3A4B] border-[#1B3A4B] text-white shadow-xs'
-                            : 'bg-[#FFFDF7] border-[#FDE68A]/50 text-[#1B3A4B]/70 hover:bg-[#FFFDF7]'
+                            ? 'bg-[#064E3B] border-[#064E3B] text-white shadow-xs'
+                            : 'bg-[#F7FEE7] border-[#ECFCCB]/50 text-[#064E3B]/70 hover:bg-[#F7FEE7]'
                         }`}
                       >
                         {o}
@@ -274,10 +274,10 @@ export default function ProductDetailModal({
             )}
 
             {/* Below Fold Tabs: Detailed Info */}
-            <div className="bg-[#FFFDF7]/50 border border-[#FDE68A]/30 rounded-2xl p-4">
+            <div className="bg-[#F7FEE7]/50 border border-[#ECFCCB]/30 rounded-2xl p-4">
               
               {/* Tab headers */}
-              <div className="flex border-b border-[#FDE68A]/50 gap-4 mb-3">
+              <div className="flex border-b border-[#ECFCCB]/50 gap-4 mb-3">
                 {[
                   { label: 'Description', id: 'desc' },
                   { label: 'Specs', id: 'specs' },
@@ -288,7 +288,7 @@ export default function ProductDetailModal({
                     id={`detail-tab-${t.id}`}
                     onClick={() => setActiveTab(t.id as any)}
                     className={`pb-1.5 text-[10px] uppercase font-bold border-b-2 font-mono transition-colors cursor-pointer ${
-                      activeTab === t.id ? 'border-[#FF7F50] text-[#FF7F50]' : 'border-transparent text-[#1B3A4B]/50 hover:text-[#1B3A4B]/80'
+                      activeTab === t.id ? 'border-[#10B981] text-[#10B981]' : 'border-transparent text-[#064E3B]/50 hover:text-[#064E3B]/80'
                     }`}
                   >
                     {t.label}
@@ -297,14 +297,14 @@ export default function ProductDetailModal({
               </div>
 
               {/* Tab contents */}
-              <div className="text-[#1B3A4B]/70 text-xs leading-relaxed">
+              <div className="text-[#064E3B]/70 text-xs leading-relaxed">
                 {activeTab === 'desc' && (
                   <div className="space-y-3 font-sans">
-                    <p className="font-light text-[#1B3A4B]/70">
+                    <p className="font-light text-[#064E3B]/70">
                       {product.description}
                     </p>
-                    <div className="p-2.5 bg-white rounded-lg border border-[#FDE68A]/50 flex items-center gap-2 shadow-inner">
-                      <div className="w-8 h-8 bg-[#FDE68A] rounded-full flex items-center justify-center font-bold text-[#FF7F50] text-[10px] overflow-hidden shrink-0 border border-[#FF7F50]/20">
+                    <div className="p-2.5 bg-white rounded-lg border border-[#ECFCCB]/50 flex items-center gap-2 shadow-inner">
+                      <div className="w-8 h-8 bg-[#ECFCCB] rounded-full flex items-center justify-center font-bold text-[#10B981] text-[10px] overflow-hidden shrink-0 border border-[#10B981]/20">
                         {product.fisherman.image ? (
                           <img src={product.fisherman.image} alt={product.fisherman.name} className="w-full h-full object-cover" />
                         ) : (
@@ -312,8 +312,8 @@ export default function ProductDetailModal({
                         )}
                       </div>
                       <div className="text-[10px]">
-                        <span className="text-[#1B3A4B]/50 block text-[8px] uppercase">Sourced from:</span>
-                        <strong className="text-[#1B3A4B] block leading-tight">{product.fisherman.name} ({product.fisherman.location})</strong>
+                        <span className="text-[#064E3B]/50 block text-[8px] uppercase">Sourced from:</span>
+                        <strong className="text-[#064E3B] block leading-tight">{product.fisherman.name} ({product.fisherman.location})</strong>
                       </div>
                     </div>
                   </div>
@@ -322,9 +322,9 @@ export default function ProductDetailModal({
                 {activeTab === 'specs' && (
                   <div className="grid grid-cols-1 gap-2 font-mono text-[10px]">
                     {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between p-2 bg-white border border-[#FDE68A]/50 rounded-lg">
-                        <span className="text-[#1B3A4B]/50">{key}:</span>
-                        <strong className="text-[#1B3A4B] text-right font-bold">{value}</strong>
+                      <div key={key} className="flex justify-between p-2 bg-white border border-[#ECFCCB]/50 rounded-lg">
+                        <span className="text-[#064E3B]/50">{key}:</span>
+                        <strong className="text-[#064E3B] text-right font-bold">{value}</strong>
                       </div>
                     ))}
                   </div>
@@ -333,18 +333,18 @@ export default function ProductDetailModal({
                 {activeTab === 'reviews' && (
                   <div className="space-y-2">
                     {reviewsList.map((rev, idx) => (
-                      <div key={idx} className="bg-white border border-[#FDE68A]/50 p-2.5 rounded-lg flex justify-between items-start gap-2 shadow-xs">
+                      <div key={idx} className="bg-white border border-[#ECFCCB]/50 p-2.5 rounded-lg flex justify-between items-start gap-2 shadow-xs">
                         <div className="space-y-1">
                           <div className="flex items-center gap-1.5">
-                            <span className="w-4 h-4 rounded-full bg-[#FFFDF7] text-[#1B3A4B] flex items-center justify-center font-bold text-[8px]">
+                            <span className="w-4 h-4 rounded-full bg-[#F7FEE7] text-[#064E3B] flex items-center justify-center font-bold text-[8px]">
                               {rev.name.charAt(0)}
                             </span>
-                            <strong className="text-[#1B3A4B] text-[10px] font-semibold">{rev.name}</strong>
-                            <span className="text-[9px] text-[#1B3A4B]/50 font-mono">({rev.location})</span>
+                            <strong className="text-[#064E3B] text-[10px] font-semibold">{rev.name}</strong>
+                            <span className="text-[9px] text-[#064E3B]/50 font-mono">({rev.location})</span>
                           </div>
-                          <p className="text-[10px] text-[#1B3A4B]/70 font-sans leading-tight">{rev.text}</p>
+                          <p className="text-[10px] text-[#064E3B]/70 font-sans leading-tight">{rev.text}</p>
                         </div>
-                        <span className="bg-[#FFFDF7] px-1 py-0.5 rounded text-[8px] font-bold text-[#1B3A4B] shrink-0">
+                        <span className="bg-[#F7FEE7] px-1 py-0.5 rounded text-[8px] font-bold text-[#064E3B] shrink-0">
                           ★ {rev.rating}
                         </span>
                       </div>
@@ -356,32 +356,32 @@ export default function ProductDetailModal({
 
             {/* Related Catch slider items */}
             {relatedProducts.length > 0 && (
-              <div className="pt-4 border-t border-[#FDE68A]/50">
-                <h4 className="font-serif text-sm font-bold text-[#1B3A4B] mb-3">Related catches:</h4>
+              <div className="pt-4 border-t border-[#ECFCCB]/50">
+                <h4 className="font-serif text-sm font-bold text-[#064E3B] mb-3">Related catches:</h4>
                 <div className="flex gap-3 overflow-x-auto pb-2 scrollbar-none">
                   {relatedProducts.map((p) => (
                     <button
                       key={p.id}
                       id={`related-card-${p.id}`}
-                      className="w-36 bg-white border border-[#FDE68A]/50 hover:border-[#FFFDF7] p-2 rounded-xl shadow-xs hover:shadow-sm transition-all duration-300 text-left shrink-0 cursor-pointer flex flex-col justify-between aspect-[3/4]"
+                      className="w-36 bg-white border border-[#ECFCCB]/50 hover:border-[#F7FEE7] p-2 rounded-xl shadow-xs hover:shadow-sm transition-all duration-300 text-left shrink-0 cursor-pointer flex flex-col justify-between aspect-[3/4]"
                       onClick={() => onSelectProduct(p)}
                     >
-                      <div className="aspect-video w-full rounded-lg overflow-hidden bg-[#FFFDF7]">
+                      <div className="aspect-video w-full rounded-lg overflow-hidden bg-[#F7FEE7]">
                         <ProductImage
                           productId={p.id}
                           src={p.images[0]}
                           alt={p.name}
-                          className="w-full h-full object-contain p-1 bg-[#FFFDF7]"
+                          className="w-full h-full object-contain p-1 bg-[#F7FEE7]"
                           showUploadButton={false}
                         />
                       </div>
                       <div className="mt-1">
-                        <span className="text-[7px] font-bold text-[#FF7F50] block uppercase font-mono leading-none">{p.localName}</span>
-                        <h5 className="text-[10px] font-serif font-bold text-[#1B3A4B] truncate block mt-0.5 leading-tight">{p.name}</h5>
+                        <span className="text-[7px] font-bold text-[#10B981] block uppercase font-mono leading-none">{p.localName}</span>
+                        <h5 className="text-[10px] font-serif font-bold text-[#064E3B] truncate block mt-0.5 leading-tight">{p.name}</h5>
                       </div>
-                      <div className="flex justify-between items-center pt-1 border-t border-[#FFFDF7] mt-1">
-                        <strong className="text-[10px] font-extrabold text-[#1B3A4B]">₹{p.price}</strong>
-                        <span className="text-[8px] text-[#FF7F50] font-mono">View →</span>
+                      <div className="flex justify-between items-center pt-1 border-t border-[#F7FEE7] mt-1">
+                        <strong className="text-[10px] font-extrabold text-[#064E3B]">₹{p.price}</strong>
+                        <span className="text-[8px] text-[#10B981] font-mono">View →</span>
                       </div>
                     </button>
                   ))}
@@ -392,9 +392,9 @@ export default function ProductDetailModal({
           </div>
 
           {/* Sticky Bottom Add to Cart Call to Action */}
-          <div className="p-4 border-t border-[#FDE68A]/50 bg-white z-20 flex flex-col gap-2 shadow-inner">
-            <div className="flex items-center gap-1.5 text-[9px] text-[#1B3A4B]/70 font-sans">
-              <Truck className="h-3.5 w-3.5 text-[#FF7F50] shrink-0" />
+          <div className="p-4 border-t border-[#ECFCCB]/50 bg-white z-20 flex flex-col gap-2 shadow-inner">
+            <div className="flex items-center gap-1.5 text-[9px] text-[#064E3B]/70 font-sans">
+              <Truck className="h-3.5 w-3.5 text-[#10B981] shrink-0" />
               <span>Guaranteed catch home delivery by <strong>Tomorrow 7:30 AM</strong></span>
             </div>
 
@@ -403,8 +403,8 @@ export default function ProductDetailModal({
               onClick={handleAddClick}
               className={`w-full py-3 rounded-xl cursor-pointer text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-md ${
                 isAddedFeedback
-                  ? 'bg-[#14B8A6] text-white shadow-[#14B8A6]/10'
-                  : 'bg-gradient-to-r from-[#FF7F50] to-[#E96D3E] hover:from-[#E96D3E] hover:to-[#0F766E] text-white shadow-[#FF7F50]/20'
+                  ? 'bg-[#A3E635] text-white shadow-[#A3E635]/10'
+                  : 'bg-gradient-to-r from-[#10B981] to-[#059669] hover:from-[#059669] hover:to-[#65A30D] text-white shadow-[#10B981]/20'
               }`}
             >
               <ShoppingCart className="h-4 w-4" />

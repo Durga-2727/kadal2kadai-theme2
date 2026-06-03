@@ -203,7 +203,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FFFDF7] font-sans text-[#1B3A4B] antialiased selection:bg-[#FF7F50]/10 leading-normal select-none">
+    <div className="min-h-screen bg-[#F7FEE7] font-sans text-[#064E3B] antialiased selection:bg-[#10B981]/10 leading-normal select-none">
       
       {/* Sticky Navigation */}
       <Navigation
@@ -339,10 +339,10 @@ export default function App() {
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.95, y: 30 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-[#FDE68A]/50 flex flex-col relative my-4"
+              className="bg-white rounded-3xl w-full max-w-lg shadow-2xl overflow-hidden border border-[#ECFCCB]/50 flex flex-col relative my-4"
             >
               {/* Header block */}
-              <div className="bg-[#1B3A4B] p-6 text-white flex flex-col items-center justify-center text-center relative">
+              <div className="bg-[#064E3B] p-6 text-white flex flex-col items-center justify-center text-center relative">
                 <button
                   id="checkout-close-btn"
                   onClick={() => setCheckoutStep(null)}
@@ -350,11 +350,11 @@ export default function App() {
                 >
                   ✕
                 </button>
-                <div className="p-3 bg-[#FF7F50] text-white rounded-2xl mb-3 shadow-md">
+                <div className="p-3 bg-[#10B981] text-white rounded-2xl mb-3 shadow-md">
                   <ShieldCheck className="h-6 w-6 animate-pulse" />
                 </div>
                 <h3 className="font-serif text-xl sm:text-2xl font-bold tracking-tight">Direct Sea Sourced Checkout</h3>
-                <p className="text-xs text-[#FDE68A] mt-1 font-sans">Step {checkoutStep === 'shipping' ? '1 of 2: Delivery information' : checkoutStep === 'payment' ? '2 of 2: Cold Gateway pay' : 'Complete! order trace active'}</p>
+                <p className="text-xs text-[#ECFCCB] mt-1 font-sans">Step {checkoutStep === 'shipping' ? '1 of 2: Delivery information' : checkoutStep === 'payment' ? '2 of 2: Cold Gateway pay' : 'Complete! order trace active'}</p>
               </div>
 
               {/* Step 1: Shipping Form fields info */}
@@ -362,53 +362,53 @@ export default function App() {
                 <div className="p-6 sm:p-8 space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[11px] font-bold text-[#1B3A4B]/70 uppercase tracking-wider mb-1 font-mono">Recipient Name</label>
+                      <label className="block text-[11px] font-bold text-[#064E3B]/70 uppercase tracking-wider mb-1 font-mono">Recipient Name</label>
                       <input
                         type="text"
                         value={shippingName}
                         onChange={(e) => setShippingName(e.target.value)}
-                        className="w-full px-3.5 py-2.5 border border-[#FDE68A] focus:outline-[#FF7F50] rounded-xl text-xs bg-[#FFFDF7]/50"
+                        className="w-full px-3.5 py-2.5 border border-[#ECFCCB] focus:outline-[#10B981] rounded-xl text-xs bg-[#F7FEE7]/50"
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-[#1B3A4B]/70 uppercase tracking-wider mb-1 font-mono">Mobile Contact</label>
+                      <label className="block text-[11px] font-bold text-[#064E3B]/70 uppercase tracking-wider mb-1 font-mono">Mobile Contact</label>
                       <input
                         type="tel"
                         value={shippingPhone}
                         onChange={(e) => setShippingPhone(e.target.value)}
-                        className="w-full px-3.5 py-2.5 border border-[#FDE68A] focus:outline-[#FF7F50] rounded-xl text-xs bg-[#FFFDF7]/50"
+                        className="w-full px-3.5 py-2.5 border border-[#ECFCCB] focus:outline-[#10B981] rounded-xl text-xs bg-[#F7FEE7]/50"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-bold text-[#1B3A4B]/70 uppercase tracking-wider mb-1 font-mono">Street Address (Chennai Coverage Area)</label>
+                    <label className="block text-[11px] font-bold text-[#064E3B]/70 uppercase tracking-wider mb-1 font-mono">Street Address (Chennai Coverage Area)</label>
                     <input
                       type="text"
                       value={shippingAddress}
                       onChange={(e) => setShippingAddress(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-[#FDE68A] focus:outline-[#FF7F50] rounded-xl text-xs bg-[#FFFDF7]/50"
+                      className="w-full px-3.5 py-2.5 border border-[#ECFCCB] focus:outline-[#10B981] rounded-xl text-xs bg-[#F7FEE7]/50"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[11px] font-bold text-[#1B3A4B]/70 uppercase tracking-wider mb-1 font-mono">Postal Delivery PIN</label>
+                      <label className="block text-[11px] font-bold text-[#064E3B]/70 uppercase tracking-wider mb-1 font-mono">Postal Delivery PIN</label>
                       <input
                         type="text"
                         value={shippingPIN => shippingPin}
                         onChange={(e) => setShippingPin(e.target.value)}
                         placeholder="600004"
-                        className="w-full px-3.5 py-2.5 border border-[#FDE68A] focus:outline-[#FF7F50] rounded-xl text-xs bg-[#FFFDF7]/50 text-[#1B3A4B] font-bold"
+                        className="w-full px-3.5 py-2.5 border border-[#ECFCCB] focus:outline-[#10B981] rounded-xl text-xs bg-[#F7FEE7]/50 text-[#064E3B] font-bold"
                       />
                     </div>
                     <div>
-                      <label className="block text-[11px] font-bold text-[#1B3A4B]/70 uppercase tracking-wider mb-1 font-mono">Pre-allocated Delivery Slot</label>
+                      <label className="block text-[11px] font-bold text-[#064E3B]/70 uppercase tracking-wider mb-1 font-mono">Pre-allocated Delivery Slot</label>
                       <select
                         id="checkout-delivery-slot"
                         value={deliveryHour}
                         onChange={(e) => setDeliveryHour(e.target.value)}
-                        className="w-full bg-white px-3 py-2.5 border border-[#FDE68A] rounded-xl text-xs focus:outline-none"
+                        className="w-full bg-white px-3 py-2.5 border border-[#ECFCCB] rounded-xl text-xs focus:outline-none"
                       >
                         <option value="early-dawn">Dawn Fast (6:00 AM - 8:00 AM)</option>
                         <option value="regular">Regular Morning (8:00 AM - 12:00 PM)</option>
@@ -416,16 +416,16 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="pt-4 border-t border-[#FDE68A]/50 flex items-center justify-between">
+                  <div className="pt-4 border-t border-[#ECFCCB]/50 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] text-[#1B3A4B]/50 font-mono block">Cart Total Due:</span>
-                      <strong className="text-[#1B3A4B] text-sm font-extrabold font-serif">₹{checkoutSum}</strong>
+                      <span className="text-[10px] text-[#064E3B]/50 font-mono block">Cart Total Due:</span>
+                      <strong className="text-[#064E3B] text-sm font-extrabold font-serif">₹{checkoutSum}</strong>
                     </div>
 
                     <button
                       id="checkout-step1-next"
                       onClick={() => setCheckoutStep('payment')}
-                      className="px-6 py-3 bg-[#FF7F50] hover:bg-[#E96D3E] text-white rounded-xl text-xs uppercase tracking-widest font-bold shadow-md cursor-pointer flex items-center gap-1.5"
+                      className="px-6 py-3 bg-[#10B981] hover:bg-[#059669] text-white rounded-xl text-xs uppercase tracking-widest font-bold shadow-md cursor-pointer flex items-center gap-1.5"
                     >
                       <span>Proceed to Payment</span>
                       <Truck className="h-4 w-4" />
@@ -438,46 +438,46 @@ export default function App() {
               {checkoutStep === 'payment' && (
                 <div className="p-6 sm:p-8 space-y-4">
                   
-                  <div className="p-4 bg-[#14B8A6]/5 border border-[#14B8A6]/20 rounded-2xl flex items-center gap-3">
-                    <Sparkles className="h-5 w-5 text-[#14B8A6] shrink-0" />
-                    <p className="text-[11px] text-[#0D9488] leading-normal font-sans font-semibold">
+                  <div className="p-4 bg-[#A3E635]/5 border border-[#A3E635]/20 rounded-2xl flex items-center gap-3">
+                    <Sparkles className="h-5 w-5 text-[#A3E635] shrink-0" />
+                    <p className="text-[11px] text-[#84CC16] leading-normal font-sans font-semibold">
                       Your morning catch is already soft-reserved in the harbor freezer crates. Sourced direct guaranteed!
                     </p>
                   </div>
 
                   {/* Payment Mode options list */}
                   <div className="space-y-3">
-                    <label className="block text-[10px] font-bold text-[#1B3A4B]/70 uppercase tracking-widest block font-mono">Choose Payment Channel</label>
+                    <label className="block text-[10px] font-bold text-[#064E3B]/70 uppercase tracking-widest block font-mono">Choose Payment Channel</label>
                     
                     {/* Simulated Cash on Delivery */}
-                    <div className="p-4 border border-[#FDE68A]/80 bg-[#FFFDF7] rounded-2xl flex items-center justify-between">
+                    <div className="p-4 border border-[#ECFCCB]/80 bg-[#F7FEE7] rounded-2xl flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <input type="radio" defaultChecked className="accent-[#FF7F50]" id="pay-cod-radio" />
+                        <input type="radio" defaultChecked className="accent-[#10B981]" id="pay-cod-radio" />
                         <div>
-                          <strong className="text-xs text-[#1B3A4B] font-bold block leading-snug">Secure Cash / Pay on Delivery (Recommended)</strong>
-                          <span className="text-[10px] text-[#1B3A4B]/50 font-medium">Clear cash / UPI at your morning doorstep.</span>
+                          <strong className="text-xs text-[#064E3B] font-bold block leading-snug">Secure Cash / Pay on Delivery (Recommended)</strong>
+                          <span className="text-[10px] text-[#064E3B]/50 font-medium">Clear cash / UPI at your morning doorstep.</span>
                         </div>
                       </div>
-                      <Receipt className="h-5 w-5 text-[#1B3A4B]/50" />
+                      <Receipt className="h-5 w-5 text-[#064E3B]/50" />
                     </div>
 
                     {/* Simulated dummy UPI Scanner credit */}
-                    <div className="p-4 border border-dashed border-[#FDE68A] rounded-2xl flex flex-col items-center justify-center p-4">
-                      <div className="w-24 h-24 bg-[#FFFDF7] rounded-xl flex items-center justify-center text-center p-3 text-[#1B3A4B]/50 border border-[#FDE68A] font-mono text-[9px] select-none pointer-events-none">
+                    <div className="p-4 border border-dashed border-[#ECFCCB] rounded-2xl flex flex-col items-center justify-center p-4">
+                      <div className="w-24 h-24 bg-[#F7FEE7] rounded-xl flex items-center justify-center text-center p-3 text-[#064E3B]/50 border border-[#ECFCCB] font-mono text-[9px] select-none pointer-events-none">
                         [SIMULATED QR CODE DOCK]
                       </div>
-                      <span className="text-[9px] text-[#1B3A4B]/50 font-mono mt-2 italic text-center leading-normal">
+                      <span className="text-[9px] text-[#064E3B]/50 font-mono mt-2 italic text-center leading-normal">
                         Pre-pay early using any UPI scanner app directly if wanted. UPI ID: k2kseafood@icici
                       </span>
                     </div>
 
                   </div>
 
-                  <div className="pt-4 border-t border-[#FDE68A]/50 flex items-center justify-between gap-4">
+                  <div className="pt-4 border-t border-[#ECFCCB]/50 flex items-center justify-between gap-4">
                     <button
                       id="checkout-payment-back"
                       onClick={() => setCheckoutStep('shipping')}
-                      className="px-4 py-3 bg-[#FFFDF7] hover:bg-[#FDE68A] text-[#1B3A4B]/70 rounded-xl text-xs font-bold transition-colors cursor-pointer"
+                      className="px-4 py-3 bg-[#F7FEE7] hover:bg-[#ECFCCB] text-[#064E3B]/70 rounded-xl text-xs font-bold transition-colors cursor-pointer"
                     >
                       Go Back
                     </button>
@@ -485,7 +485,7 @@ export default function App() {
                     <button
                       id="checkout-payment-complete"
                       onClick={handleCompleteOrder}
-                      className="px-6 py-3 bg-[#1B3A4B] hover:bg-black text-white rounded-xl text-xs uppercase tracking-widest font-bold shadow-md cursor-pointer flex items-center gap-1.5"
+                      className="px-6 py-3 bg-[#064E3B] hover:bg-black text-white rounded-xl text-xs uppercase tracking-widest font-bold shadow-md cursor-pointer flex items-center gap-1.5"
                     >
                       <CreditCard className="h-4 w-4" />
                       <span>Place Sourced Order</span>
@@ -499,32 +499,32 @@ export default function App() {
               {checkoutStep === 'completed' && (
                 <div className="p-6 sm:p-8 text-center space-y-6">
                   
-                  <div className="w-16 h-16 bg-[#14B8A6]/10 text-[#14B8A6] rounded-full flex items-center justify-center mx-auto shadow-md">
+                  <div className="w-16 h-16 bg-[#A3E635]/10 text-[#A3E635] rounded-full flex items-center justify-center mx-auto shadow-md">
                     <CheckCircle className="h-8 w-8 animate-bounce" />
                   </div>
 
                   <div>
-                    <h4 className="font-serif text-2xl font-bold text-[#1B3A4B] leading-tight">Order Placed Successfully!</h4>
-                    <p className="text-xs text-[#FF7F50] font-bold block font-mono uppercase mt-1 tracking-widest">Order ID: K2K-{Math.floor(Math.random() * 89999 + 10000)}</p>
+                    <h4 className="font-serif text-2xl font-bold text-[#064E3B] leading-tight">Order Placed Successfully!</h4>
+                    <p className="text-xs text-[#10B981] font-bold block font-mono uppercase mt-1 tracking-widest">Order ID: K2K-{Math.floor(Math.random() * 89999 + 10000)}</p>
                     
-                    <p className="text-xs text-[#1B3A4B]/70 mt-3 max-w-sm mx-auto leading-relaxed font-sans font-light">
+                    <p className="text-xs text-[#064E3B]/70 mt-3 max-w-sm mx-auto leading-relaxed font-sans font-light">
                       Thank you, <strong>{shippingName}</strong>. Your morning catch reservation is confirmed! The fisherman network has been allocated to lock down fresh items of your choice.
                     </p>
                   </div>
 
                   {/* Sourced Timeline metadata summary table */}
-                  <div className="bg-[#FFFDF7] border border-[#FDE68A]/50 p-4 rounded-2xl text-left space-y-2.5 font-mono text-xs">
+                  <div className="bg-[#F7FEE7] border border-[#ECFCCB]/50 p-4 rounded-2xl text-left space-y-2.5 font-mono text-xs">
                     <div className="flex justify-between">
-                      <span className="text-[#1B3A4B]/50">Recipient:</span>
-                      <strong className="text-[#1B3A4B]">{shippingName} ({shippingPhone})</strong>
+                      <span className="text-[#064E3B]/50">Recipient:</span>
+                      <strong className="text-[#064E3B]">{shippingName} ({shippingPhone})</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#1B3A4B]/50">Address Mapped:</span>
-                      <strong className="text-[#1B3A4B] text-right truncate block max-w-[200px]">{shippingAddress}, PIN {shippingPin}</strong>
+                      <span className="text-[#064E3B]/50">Address Mapped:</span>
+                      <strong className="text-[#064E3B] text-right truncate block max-w-[200px]">{shippingAddress}, PIN {shippingPin}</strong>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-[#1B3A4B]/50">Cold Delivery Delivery:</span>
-                      <strong className="text-[#14B8A6] font-bold uppercase">To-Morning 7:30 AM</strong>
+                      <span className="text-[#064E3B]/50">Cold Delivery Delivery:</span>
+                      <strong className="text-[#A3E635] font-bold uppercase">To-Morning 7:30 AM</strong>
                     </div>
                   </div>
 
@@ -532,7 +532,7 @@ export default function App() {
                     <button
                       id="checkout-completed-close"
                       onClick={() => setCheckoutStep(null)}
-                      className="w-full bg-[#FF7F50] hover:bg-[#E96D3E] text-white text-xs font-bold tracking-widest uppercase py-3.5 rounded-xl cursor-pointer shadow-sm hover:shadow-[#FFFDF7] transition-all flex items-center justify-center gap-1.5"
+                      className="w-full bg-[#10B981] hover:bg-[#059669] text-white text-xs font-bold tracking-widest uppercase py-3.5 rounded-xl cursor-pointer shadow-sm hover:shadow-[#F7FEE7] transition-all flex items-center justify-center gap-1.5"
                     >
                       <Navigation2 className="h-4 w-4" />
                       <span>Back to Catch Galleries</span>

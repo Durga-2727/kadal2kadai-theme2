@@ -75,27 +75,27 @@ export default function TopSellingSection({
   };
 
   return (
-    <section id="top-selling" className="py-10 sm:py-12 bg-[#FFFDF7] border-t border-b border-[#FDE68A]/50 overflow-hidden relative">
+    <section id="top-selling" className="py-10 sm:py-12 bg-[#F7FEE7] border-t border-b border-[#ECFCCB]/50 overflow-hidden relative">
       {/* Background Subtle Watermark Rings */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20%" cy="30%" r="200" fill="#FF7F50" />
-          <circle cx="80%" cy="70%" r="300" fill="#1B3A4B" />
+          <circle cx="20%" cy="30%" r="200" fill="#10B981" />
+          <circle cx="80%" cy="70%" r="300" fill="#064E3B" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#14B8A6]/10 border border-[#14B8A6]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#14B8A6] tracking-wider font-mono">
-            <Award className="h-4.5 w-4.5 text-[#14B8A6]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#A3E635]/10 border border-[#A3E635]/20 rounded-full mb-3 text-[10px] sm:text-xs uppercase font-bold text-[#A3E635] tracking-wider font-mono">
+            <Award className="h-4.5 w-4.5 text-[#A3E635]" />
             <span>Top Rated & Coveted</span>
           </div>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-[#1B3A4B] tracking-tight">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-black text-[#064E3B] tracking-tight">
             Top Selling Seafood
           </h2>
-          <div className="w-16 h-1 bg-[#14B8A6] mx-auto mt-4 rounded-full" />
-          <p className="text-xs sm:text-sm text-[#1B3A4B]/70 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
+          <div className="w-16 h-1 bg-[#A3E635] mx-auto mt-4 rounded-full" />
+          <p className="text-xs sm:text-sm text-[#064E3B]/70 mt-4 leading-relaxed font-sans max-w-xl mx-auto">
             The most sought-after catches, favored by premium chefs and home cooks alike for their exquisite taste, absolute freshness, and immaculate cuts.
           </p>
         </div>
@@ -103,8 +103,8 @@ export default function TopSellingSection({
         {/* Endless Moving Carousel Belt Wrapper */}
         <div className="relative w-full overflow-hidden pause-marquee -mx-4 sm:mx-0">
           {/* Subtle fade-out gradients on left/right edges for premium visual blending */}
-          <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-20 bg-gradient-to-r from-[#FFFDF7] to-transparent z-20 pointer-events-none" />
-          <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-20 bg-gradient-to-l from-[#FFFDF7] to-transparent z-20 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 left-0 w-8 sm:w-20 bg-gradient-to-r from-[#F7FEE7] to-transparent z-20 pointer-events-none" />
+          <div className="absolute top-0 bottom-0 right-0 w-8 sm:w-20 bg-gradient-to-l from-[#F7FEE7] to-transparent z-20 pointer-events-none" />
 
           {/* Scrolling Marquee Container */}
           <div className="animate-marquee-left flex gap-6 py-4 px-4 sm:px-0">
@@ -120,11 +120,11 @@ export default function TopSellingSection({
                 <div
                   key={`${p.id}-top-${idx}`}
                   id={`top-selling-card-${p.id}-${idx}`}
-                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-white rounded-2xl border border-[#FDE68A]/50 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
+                  className="w-[200px] sm:w-[240px] lg:w-[250px] shrink-0 group bg-white rounded-2xl border border-[#ECFCCB]/50 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between overflow-hidden relative cursor-pointer"
                   onClick={() => onSelectProduct(p)}
                 >
                   {/* Product Image Stage */}
-                  <div className="relative aspect-square overflow-hidden bg-[#FFFDF7] select-none">
+                  <div className="relative aspect-square overflow-hidden bg-[#F7FEE7] select-none">
                     <ProductImage
                       productId={p.id}
                       src={p.images[0]}
@@ -138,13 +138,13 @@ export default function TopSellingSection({
                     {/* Left Badges */}
                     <div className="absolute top-2.5 left-2.5 z-25 flex flex-col gap-1 sm:gap-1.5">
                       {isFresh && (
-                        <span className="bg-[#14B8A6] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 sm:gap-1 shadow-sm font-sans">
+                        <span className="bg-[#A3E635] text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 sm:gap-1 shadow-sm font-sans">
                           <Clock className="w-2.5 h-2.5" />
                           <span>Fresh</span>
                         </span>
                       )}
-                      <span className="bg-[#FFFDF7]0 text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
-                        <Flame className="w-2.5 h-2.5 text-[#FF7F50] fill-[#FF7F50]" />
+                      <span className="bg-[#F7FEE7]0 text-white text-[8px] sm:text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-lg flex items-center gap-0.5 shadow-sm font-sans">
+                        <Flame className="w-2.5 h-2.5 text-[#10B981] fill-[#10B981]" />
                         <span>Best Selling</span>
                       </span>
                     </div>
@@ -156,9 +156,9 @@ export default function TopSellingSection({
                         e.stopPropagation();
                         onToggleWishlist(p.id);
                       }}
-                      className="absolute top-2.5 right-2.5 z-25 p-1.5 sm:p-2 bg-white/70 hover:bg-white backdrop-blur-md text-[#1B3A4B] hover:text-[#FF7F50] rounded-xl transition-all cursor-pointer shadow-sm"
+                      className="absolute top-2.5 right-2.5 z-25 p-1.5 sm:p-2 bg-white/70 hover:bg-white backdrop-blur-md text-[#064E3B] hover:text-[#10B981] rounded-xl transition-all cursor-pointer shadow-sm"
                     >
-                      <Heart className={`w-3.5 h-3.5 ${isWishlisted ? 'fill-[#FF7F50] text-[#FF7F50]' : ''}`} />
+                      <Heart className={`w-3.5 h-3.5 ${isWishlisted ? 'fill-[#10B981] text-[#10B981]' : ''}`} />
                     </button>
 
                     {/* Location Tag */}
@@ -172,67 +172,67 @@ export default function TopSellingSection({
                     <div>
                       {/* Localized subtag and ratings count */}
                       <div className="flex items-center justify-between gap-1 mb-1">
-                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#FF7F50] uppercase font-mono block max-w-[120px] truncate">
+                        <span className="text-[9px] sm:text-[10px] font-bold tracking-wider text-[#10B981] uppercase font-mono block max-w-[120px] truncate">
                           {p.localName}
                         </span>
                         <div className="flex items-center gap-0.5 font-sans shrink-0">
-                          <span className="text-[#FF7F50] text-[10px] sm:text-xs">★</span>
-                          <span className="text-[10px] font-bold text-[#1B3A4B]/80">{p.rating}</span>
+                          <span className="text-[#10B981] text-[10px] sm:text-xs">★</span>
+                          <span className="text-[10px] font-bold text-[#064E3B]/80">{p.rating}</span>
                         </div>
                       </div>
 
                       {/* Title block */}
-                      <p className="font-serif text-sm sm:text-base font-bold text-[#1B3A4B] tracking-tight group-hover:text-[#FF7F50] transition-colors truncate">
+                      <p className="font-serif text-sm sm:text-base font-bold text-[#064E3B] tracking-tight group-hover:text-[#10B981] transition-colors truncate">
                         {p.name}
                       </p>
 
                       {/* Weight Selector */}
                       <div className="mt-3 flex items-center justify-between gap-1 group/select" onClick={(e) => e.stopPropagation()}>
-                        <span className="text-[10px] font-medium text-[#1B3A4B]/50 font-mono">Weight:</span>
+                        <span className="text-[10px] font-medium text-[#064E3B]/50 font-mono">Weight:</span>
                         <div className="relative">
                           <select
                             id={`top-weight-select-${p.id}-${idx}`}
                             value={weightSelected}
                             onChange={(e) => handleWeightChange(p.id, e.target.value)}
-                            className="bg-[#FFFDF7] border border-[#FDE68A]/50 text-[10px] font-bold text-[#1B3A4B]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF7F50] transition-all"
+                            className="bg-[#F7FEE7] border border-[#ECFCCB]/50 text-[10px] font-bold text-[#064E3B]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#10B981] transition-all"
                           >
                             {p.availableWeights.map(w => (
                               <option key={w} value={w}>{w}</option>
                             ))}
                           </select>
-                          <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#1B3A4B]/50" />
+                          <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#064E3B]/50" />
                         </div>
                       </div>
 
                       {/* Cuts Options */}
                       {p.processingOptions.length > 0 && (
                         <div className="mt-1.5 flex items-center justify-between gap-1 group/select" onClick={(e) => e.stopPropagation()}>
-                          <span className="text-[10px] font-medium text-[#1B3A4B]/50 font-mono font-light">Cuts:</span>
+                          <span className="text-[10px] font-medium text-[#064E3B]/50 font-mono font-light">Cuts:</span>
                           <div className="relative">
                             <select
                               id={`top-processing-select-${p.id}-${idx}`}
                               value={processingSelected}
                               onChange={(e) => handleProcessingChange(p.id, e.target.value)}
-                              className="bg-[#FFFDF7] border border-[#FDE68A]/50 text-[10px] font-bold text-[#1B3A4B]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#FF7F50] transition-all"
+                              className="bg-[#F7FEE7] border border-[#ECFCCB]/50 text-[10px] font-bold text-[#064E3B]/80 pr-5 pl-1.5 py-0.5 rounded-md appearance-none focus:outline-none cursor-pointer group-hover/select:border-[#10B981] transition-all"
                             >
                               {p.processingOptions.map(o => (
                                 <option key={o} value={o}>{o}</option>
                               ))}
                             </select>
-                            <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#1B3A4B]/50" />
+                            <ChevronDown className="h-3 w-3 absolute right-1 top-1 pointer-events-none text-[#064E3B]/50" />
                           </div>
                         </div>
                       )}
                     </div>
 
                     {/* Price and Cart Action */}
-                    <div className="mt-4 pt-2.5 border-t border-[#FDE68A]/50 flex items-center justify-between">
+                    <div className="mt-4 pt-2.5 border-t border-[#ECFCCB]/50 flex items-center justify-between">
                       <div className="flex flex-col">
                         <div className="flex items-baseline gap-0.5">
-                          <span className="text-xs font-bold text-[#1B3A4B]">₹</span>
-                          <span className="text-base font-extrabold text-[#1B3A4B]">{currentPrice}</span>
+                          <span className="text-xs font-bold text-[#064E3B]">₹</span>
+                          <span className="text-base font-extrabold text-[#064E3B]">{currentPrice}</span>
                         </div>
-                        <span className="text-[9px] text-[#1B3A4B]/50 tracking-wide font-mono">/{weightSelected}</span>
+                        <span className="text-[9px] text-[#064E3B]/50 tracking-wide font-mono">/{weightSelected}</span>
                       </div>
 
                       <button
@@ -240,8 +240,8 @@ export default function TopSellingSection({
                         onClick={(e) => triggerAddToCart(e, p)}
                         className={`p-2 px-3 rounded-xl cursor-pointer text-[10px] sm:text-xs font-extrabold transition-all duration-300 flex items-center gap-1 shadow-sm ${
                           isFirstAdded
-                            ? 'bg-[#14B8A6] text-white shadow-[#14B8A6]/10'
-                            : 'bg-gradient-to-r from-[#FF7F50] to-[#E96D3E] text-white hover:from-[#E96D3E] hover:to-[#0F766E] hover:shadow-md shadow-[#FF7F50]/20'
+                            ? 'bg-[#A3E635] text-white shadow-[#A3E635]/10'
+                            : 'bg-gradient-to-r from-[#10B981] to-[#059669] text-white hover:from-[#059669] hover:to-[#65A30D] hover:shadow-md shadow-[#10B981]/20'
                         }`}
                       >
                         {isFirstAdded ? (
